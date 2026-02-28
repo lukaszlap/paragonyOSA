@@ -1,0 +1,204 @@
+<div id="edit-receipt-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><i class="fas fa-edit"></i> Edycja Paragonu</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="edit-receipt-form">
+                                <div class="form-section">
+                                    <h3>Informacje o sklepie</h3>
+                                    <div class="form-group">
+                                        <label for="edit-receipt-company" class="form-label">
+                                            <i class="fas fa-store"></i> Firma
+                                        </label>
+                                        <select id="edit-receipt-company" class="form-input" required>
+                                            <option value="">Wybierz firmę...</option>
+                                        </select>
+                                        <span class="form-error" id="edit-receipt-company-error"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edit-receipt-city" class="form-label">
+                                            <i class="fas fa-city"></i> Miasto
+                                        </label>
+                                        <select id="edit-receipt-city" class="form-input" required>
+                                            <option value="">Wybierz miasto...</option>
+                                        </select>
+                                        <span class="form-error" id="edit-receipt-city-error"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edit-receipt-street" class="form-label">
+                                            <i class="fas fa-map-marker-alt"></i> Ulica
+                                        </label>
+                                        <input type="text" id="edit-receipt-street" class="form-input" 
+                                               placeholder="np. Marszałkowska 1">
+                                        <span class="form-error" id="edit-receipt-street-error"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Wartości finansowe</h3>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="edit-receipt-total" class="form-label">
+                                                <i class="fas fa-wallet"></i> Suma (zł)
+                                            </label>
+                                            <input type="number" id="edit-receipt-total" class="form-input" 
+                                                   step="0.01" min="0" required>
+                                            <span class="form-error" id="edit-receipt-total-error"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="edit-receipt-discount" class="form-label">
+                                                <i class="fas fa-percent"></i> Rabat (zł)
+                                            </label>
+                                            <input type="number" id="edit-receipt-discount" class="form-input" 
+                                                   step="0.01" value="0">
+                                            <span class="form-error" id="edit-receipt-discount-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h3>Dodatkowe informacje</h3>
+                                    <div class="form-group">
+                                        <label for="edit-receipt-description" class="form-label">
+                                            <i class="fas fa-sticky-note"></i> Opis
+                                        </label>
+                                        <textarea id="edit-receipt-description" class="form-input" 
+                                                  rows="3" placeholder="Dodaj opcjonalny opis..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-secondary close-modal">
+                                        <i class="fas fa-times"></i> Anuluj
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Zapisz zmiany
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+<div id="edit-product-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><i class="fas fa-box"></i> Edycja Produktu</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="edit-product-form">
+                                <input type="hidden" id="edit-product-id">
+                                
+                                <div class="form-group">
+                                    <label for="edit-product-name" class="form-label">
+                                        <i class="fas fa-tag"></i> Nazwa produktu
+                                    </label>
+                                    <input type="text" id="edit-product-name" class="form-input" 
+                                           placeholder="np. Mleko 3,2%" required>
+                                    <span class="form-error" id="edit-product-name-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="edit-product-category" class="form-label">
+                                        <i class="fas fa-list"></i> Kategoria
+                                    </label>
+                                    <select id="edit-product-category" class="form-input" required>
+                                        <option value="">Wybierz kategorię...</option>
+                                    </select>
+                                    <span class="form-error" id="edit-product-category-error"></span>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="edit-product-price" class="form-label">
+                                            <i class="fas fa-money-bill"></i> Cena całkowita (zł)
+                                        </label>
+                                        <input type="number" id="edit-product-price" class="form-input" 
+                                               step="0.01" min="0" required>
+                                        <span class="form-error" id="edit-product-price-error"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edit-product-quantity" class="form-label">
+                                            <i class="fas fa-balance-scale"></i> Ilość
+                                        </label>
+                                        <input type="number" id="edit-product-quantity" class="form-input" 
+                                               step="0.01" min="0.01" required>
+                                        <span class="form-error" id="edit-product-quantity-error"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="edit-product-unit" class="form-label">
+                                            <i class="fas fa-ruler"></i> Jednostka
+                                        </label>
+                                        <select id="edit-product-unit" class="form-input" required>
+                                            <option value="szt">Sztuka (szt)</option>
+                                            <option value="kg">Kilogram (kg)</option>
+                                            <option value="l">Litr (l)</option>
+                                            <option value="g">Gram (g)</option>
+                                            <option value="ml">Mililitr (ml)</option>
+                                            <option value="op">Opakowanie (op)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="edit-product-tax" class="form-label">
+                                            <i class="fas fa-percent"></i> Typ podatku VAT
+                                        </label>
+                                        <select id="edit-product-tax" class="form-input" required>
+                                            <option value="A">A (23%)</option>
+                                            <option value="B">B (8%)</option>
+                                            <option value="C">C (5%)</option>
+                                            <option value="D">D (0%)</option>
+                                            <option value="E">E (zw.)</option>
+                                            <option value="F">F (np.)</option>
+                                            <option value="G">G (inne)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="unit-price-display">
+                                    <i class="fas fa-calculator"></i>
+                                    <span>Cena jednostkowa: <strong id="calculated-unit-price">0.00 zł</strong></span>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-danger" id="delete-product-from-modal">
+                                        <i class="fas fa-trash"></i> Usuń produkt
+                                    </button>
+                                    <div class="form-actions-right">
+                                        <button type="button" class="btn btn-secondary close-modal">
+                                            <i class="fas fa-times"></i> Anuluj
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-save"></i> Zapisz
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+<div id="confirm-delete-modal" class="modal hidden">
+                    <div class="modal-content modal-confirm">
+                        <div class="modal-header">
+                            <h2><i class="fas fa-exclamation-triangle"></i> Potwierdzenie</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="confirm-delete-message"></p>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-secondary close-modal">
+                                    <i class="fas fa-times"></i> Anuluj
+                                </button>
+                                <button type="button" class="btn btn-danger" id="confirm-delete-action">
+                                    <i class="fas fa-trash"></i> Usuń
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>

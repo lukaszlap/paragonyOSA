@@ -1,0 +1,40 @@
+<!-- Floating Assistant Button & Mini Chat -->
+    <button id="floating-assistant-btn" class="floating-assistant-btn" style="display: none;" aria-label="Otwórz asystenta AI" title="Asystent AI">
+        <i class="fas fa-robot"></i>
+        <div class="badge-dot"></div>
+    </button>
+
+    <!-- Mini Chat Window -->
+    <div id="assistant-mini-chat" class="assistant-mini-chat">
+        <div class="assistant-mini-chat-header">
+            <div class="assistant-mini-chat-title">
+                <i class="fas fa-robot"></i>
+                <span>Asystent AI</span>
+            </div>
+            <div class="assistant-mini-chat-actions">
+                <button id="assistant-mini-clear-btn" class="assistant-mini-chat-action-btn" aria-label="Wyczyść czat" title="Wyczyść historię czatu">
+                    <i class="fas fa-broom"></i>
+                </button>
+                <button id="assistant-mini-chat-close" class="assistant-mini-chat-close" aria-label="Zamknij czat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="assistant-mini-messages" id="assistant-mini-messages">
+            <!-- Messages will be inserted here -->
+        </div>
+        <div class="assistant-mini-input-area">
+            <div class="assistant-mini-input-wrapper">
+                <textarea 
+                    id="assistant-mini-input" 
+                    class="assistant-mini-input" 
+                    placeholder="Napisz wiadomość..."
+                    rows="1"
+                    maxlength="500"
+                ></textarea>
+                <button id="assistant-mini-send-btn" class="assistant-mini-send-btn" aria-label="Wyślij wiadomość">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,383 @@
+<div id="profile-view" class="content-view">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">
+                            <i class="fas fa-user"></i> Mój profil
+                        </h1>
+                        <p class="page-subtitle">Zarządzaj swoim kontem i ustawieniami</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Left Column - Profile Card -->
+                    <div class="col-span-1">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="profile-avatar-container">
+                                    <img 
+                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" 
+                                        alt="Avatar" 
+                                        class="profile-avatar"
+                                        id="profile-avatar-img">
+                                    <button class="profile-avatar-edit">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <h2 class="text-xl font-bold mt-4" id="profile-display-name">Użytkownik</h2>
+                                <p class="text-gray-600" id="profile-display-email">email@example.com</p>
+                                <div class="mt-4">
+                                    <span class="badge badge-primary">Konto podstawowe</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-secondary w-full" id="upgrade-btn">
+                                    <i class="fas fa-crown"></i> Przejdź na Premium
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div class="card mt-4">
+                            <div class="card-header">
+                                <h3 class="text-lg font-bold">Statystyki</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="profile-stat">
+                                    <div class="profile-stat-icon">
+                                        <i class="fas fa-receipt"></i>
+                                    </div>
+                                    <div class="profile-stat-info">
+                                        <div class="profile-stat-value" id="profile-total-receipts">0</div>
+                                        <div class="profile-stat-label">Paragonów</div>
+                                    </div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="profile-stat-icon">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <div class="profile-stat-info">
+                                        <div class="profile-stat-value" id="profile-total-spent">0 zł</div>
+                                        <div class="profile-stat-label">Wydano</div>
+                                    </div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="profile-stat-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="profile-stat-info">
+                                        <div class="profile-stat-value" id="profile-total-products">0</div>
+                                        <div class="profile-stat-label">Produktów</div>
+                                    </div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="profile-stat-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <div class="profile-stat-info">
+                                        <div class="profile-stat-value" id="profile-limit-warnings">0</div>
+                                        <div class="profile-stat-label">Ostrzeżenia o limitach</div>
+                                    </div>
+                                </div>
+                                <div class="profile-stat">
+                                    <div class="profile-stat-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <div class="profile-stat-info">
+                                        <div class="profile-stat-value" id="profile-notifications-count">0</div>
+                                        <div class="profile-stat-label">Powiadomienia</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Settings -->
+                    <div class="col-span-2">
+                        <!-- Tabs -->
+                        <div class="tabs mb-6">
+                            <button class="tab active" data-tab="personal">
+                                <i class="fas fa-user"></i> Dane osobowe
+                            </button>
+                            <button class="tab" data-tab="security">
+                                <i class="fas fa-lock"></i> Bezpieczeństwo
+                            </button>
+                            <button class="tab" data-tab="settings">
+                                <i class="fas fa-cog"></i> Ustawienia
+                            </button>
+                            <button class="tab" data-tab="logs">
+                                <i class="fas fa-history"></i> Logi
+                            </button>
+                        </div>
+
+                        <!-- Personal Data Tab -->
+                        <div class="tab-content active" id="personal-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-lg font-bold">Dane osobowe</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form id="personal-data-form">
+                                        <div class="form-group">
+                                            <label for="profile-name-input" class="form-label required">Imię</label>
+                                            <input type="text" id="profile-name-input" class="form-input" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="profile-email-input" class="form-label required">Email</label>
+                                            <input type="email" id="profile-email-input" class="form-input" required>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save"></i> Zapisz zmiany
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Tab -->
+                        <div class="tab-content" id="security-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-lg font-bold">Zmiana hasła</h3>
+                                </div>
+                                <div class="card-body">
+                                    <form id="change-password-form">
+                                        <div class="form-group">
+                                            <label for="new-password" class="form-label required">Nowe hasło</label>
+                                            <input type="password" id="new-password" class="form-input" required minlength="8">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="confirm-password" class="form-label required">Potwierdź hasło</label>
+                                            <input type="password" id="confirm-password" class="form-input" required>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fas fa-save"></i> Zmień hasło
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Settings Tab -->
+                        <div class="tab-content" id="settings-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-lg font-bold">
+                                        <i class="fas fa-robot"></i> Klucz API Gemini
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <form id="api-key-form">
+                                        <div class="form-group">
+                                            <label for="profile-api-key" class="form-label">Klucz API</label>
+                                            <div class="form-button-group">
+                                                <input type="text" id="profile-api-key" class="form-input" 
+                                                       placeholder="Wklej swój klucz API Gemini">
+                                                <button type="button" id="update-api-key-btn" class="btn btn-primary">
+                                                    <i class="fas fa-save"></i> Zapisz
+                                                </button>
+                                            </div>
+                                            <p class="form-hint">
+                                                <i class="fas fa-info-circle"></i>
+                                                Klucz API jest potrzebny do korzystania z funkcji AI (skanowanie paragonów, sugestie dań)
+                                            </p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="card mt-6">
+                                <div class="card-header">
+                                    <h3 class="text-lg font-bold">
+                                        <i class="fas fa-bell"></i> Powiadomienia
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-switch mb-4">
+                                        <input type="checkbox" id="notifications-email" class="form-switch-input" checked>
+                                        <label for="notifications-email">Powiadomienia email</label>
+                                    </div>
+                                    <div class="form-switch mb-4">
+                                        <input type="checkbox" id="notifications-limits" class="form-switch-input" checked>
+                                        <label for="notifications-limits">Ostrzeżenia o limitach</label>
+                                    </div>
+                                    <div class="form-switch">
+                                        <input type="checkbox" id="notifications-weekly" class="form-switch-input">
+                                        <label for="notifications-weekly">Tygodniowe podsumowania</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Logs Tab -->
+                        <div class="tab-content" id="logs-tab">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="text-lg font-bold">
+                                        <i class="fas fa-history"></i> Historia aktywności
+                                    </h3>
+                                </div>
+                                <div class="card-body">
+                                    <!-- Search/Filter Section -->
+                                    <div class="logs-filters mb-4">
+                                        <div class="grid grid-cols-2 gap-4 mb-3">
+                                            <div class="form-group">
+                                                <label for="logs-date-from-filter" class="form-label">
+                                                    <i class="fas fa-calendar-alt"></i> Data od
+                                                </label>
+                                                <input type="date" id="logs-date-from-filter" class="form-input">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="logs-date-to-filter" class="form-label">
+                                                    <i class="fas fa-calendar-check"></i> Data do
+                                                </label>
+                                                <input type="date" id="logs-date-to-filter" class="form-input">
+                                            </div>
+                                        </div>
+                                        <div class="grid grid-cols-3 gap-4">
+                                            <div class="form-group">
+                                                <label for="logs-action-filter" class="form-label">
+                                                    <i class="fas fa-bolt"></i> Typ akcji
+                                                </label>
+                                                <select id="logs-action-filter" class="form-select">
+                                                    <option value="">Wszystkie akcje</option>
+                                                    <optgroup label="🔐 Autentykacja">
+                                                        <option value="login">Logowanie</option>
+                                                        <option value="logout">Wylogowanie</option>
+                                                        <option value="register">Rejestracja</option>
+                                                    </optgroup>
+                                                    <optgroup label="📸 Skanowanie Paragonów">
+                                                        <option value="scan_receipt_start">Rozpoczęto skanowanie</option>
+                                                        <option value="scan_receipt_success">Skanowanie zakończone</option>
+                                                        <option value="scan_receipt_error">Błąd skanowania</option>
+                                                        <option value="add_receipt_start">Rozpoczęto dodawanie paragonu</option>
+                                                        <option value="add_receipt_success">Dodano paragon</option>
+                                                        <option value="add_receipt_error">Błąd dodawania paragonu</option>
+                                                    </optgroup>
+                                                    <optgroup label="🧾 Zarządzanie Paragonami">
+                                                        <option value="fetch_receipts_list">Pobrano listę paragonów</option>
+                                                        <option value="view_receipt_details">Wyświetlono szczegóły</option>
+                                                        <option value="update_receipt">Zaktualizowano paragon</option>
+                                                        <option value="delete_receipt">Usunięto paragon</option>
+                                                    </optgroup>
+                                                    <optgroup label="🛒 Zarządzanie Produktami">
+                                                        <option value="view_products_list">Pobrano listę produktów</option>
+                                                        <option value="classify_products_start">Klasyfikacja produktów</option>
+                                                        <option value="add_products_success">Dodano produkty</option>
+                                                        <option value="add_products_error">Błąd dodawania produktów</option>
+                                                        <option value="update_product">Zaktualizowano produkt</option>
+                                                        <option value="delete_product">Usunięto produkt</option>
+                                                    </optgroup>
+                                                    <optgroup label="💰 Limity Budżetowe">
+                                                        <option value="create_limit">Utworzono limit</option>
+                                                        <option value="update_limit">Zaktualizowano limit</option>
+                                                        <option value="delete_limit">Usunięto limit</option>
+                                                    </optgroup>
+                                                    <optgroup label="📊 Raporty">
+                                                        <option value="generate_report">Wygenerowano raport</option>
+                                                    </optgroup>
+                                                    <optgroup label="📝 Listy Zakupowe">
+                                                        <option value="create_shopping_list">Utworzono listę</option>
+                                                        <option value="view_shopping_list">Wyświetlono listę</option>
+                                                        <option value="delete_shopping_list">Usunięto listę</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="logs-status-filter" class="form-label">
+                                                    <i class="fas fa-user-tag"></i> Status użytkownika
+                                                </label>
+                                                <select id="logs-status-filter" class="form-select">
+                                                    <option value="">Wszystkie statusy</option>
+                                                    <option value="default">Podstawowy</option>
+                                                    <option value="premium">Premium</option>
+                                                    <option value="admin">Administrator</option>
+                                                    <option value="trial">Próbny</option>
+                                                    <option value="active">Aktywny</option>
+                                                    <option value="inactive">Nieaktywny</option>
+                                                    <option value="suspended">Zawieszony</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="logs-search-filter" class="form-label">
+                                                    <i class="fas fa-search"></i> Szukaj w szczegółach
+                                                </label>
+                                                <input type="text" id="logs-search-filter" class="form-input" placeholder="Wpisz tekst...">
+                                            </div>
+                                        </div>
+                                        <div class="form-actions mt-3">
+                                            <button type="button" id="logs-apply-filter-btn" class="btn btn-primary">
+                                                <i class="fas fa-search"></i> Szukaj
+                                            </button>
+                                            <button type="button" id="logs-clear-filter-btn" class="btn btn-secondary">
+                                                <i class="fas fa-times"></i> Wyczyść filtry
+                                            </button>
+                                            <span class="logs-filter-info" id="logs-filter-info"></span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Desktop Table View -->
+                                    <div class="logs-table-container">
+                                        <table class="logs-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data i czas</th>
+                                                    <th>Akcja</th>
+                                                    <th>Status użytkownika</th>
+                                                    <th>Szczegóły</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="logs-table-body">
+                                                <!-- Logs will be populated here -->
+                                            </tbody>
+                                        </table>
+                                        <div id="logs-empty-state" class="logs-empty-state hidden">
+                                            <i class="fas fa-history"></i>
+                                            <p>Brak logów do wyświetlenia</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mobile Card View -->
+                                    <div class="logs-mobile-container" id="logs-mobile-container">
+                                        <!-- Mobile logs will be populated here -->
+                                    </div>
+
+                                    <!-- Pagination -->
+                                    <div class="logs-pagination mt-4" id="logs-pagination">
+                                        <div class="logs-pagination-left">
+                                            <button class="btn btn-secondary" id="logs-prev-btn" disabled>
+                                                <i class="fas fa-chevron-left"></i> Poprzednia
+                                            </button>
+                                        </div>
+                                        <div class="logs-pagination-center">
+                                            <span class="logs-page-info" id="logs-page-info">Strona 1</span>
+                                            <div class="logs-page-size-selector">
+                                                <label for="logs-page-size-select">Pokaż:</label>
+                                                <select id="logs-page-size-select" class="form-select">
+                                                    <option value="10" selected>10</option>
+                                                    <option value="25">25</option>
+                                                    <option value="50">50</option>
+                                                    <option value="100">100</option>
+                                                </select>
+                                                <span>wpisów</span>
+                                            </div>
+                                        </div>
+                                        <div class="logs-pagination-right">
+                                            <button class="btn btn-secondary" id="logs-next-btn">
+                                                Następna <i class="fas fa-chevron-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

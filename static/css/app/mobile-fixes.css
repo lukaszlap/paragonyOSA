@@ -1,0 +1,658 @@
+/* Mobile & Tablet Font Size Adjustments */
+/* Additional responsive typography fixes for specific components */
+
+/* ===== Stats Card Value - Special range (700px to 1700px) ===== */
+@media (min-width: 700px) and (max-width: 1700px) {
+    .stats-card-value {
+        font-size: 1.75rem !important; /* 28px instead of 48px */
+    }
+}
+
+/* Further reduce on narrower screens within the range */
+@media (min-width: 700px) and (max-width: 1200px) {
+    .stats-card-value {
+        font-size: 1.5rem !important; /* 24px */
+    }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+    .stats-card-value {
+        font-size: 1.375rem !important; /* 22px */
+    }
+}
+
+/* ===== Tablets and smaller desktops (1300px and below) ===== */
+@media (max-width: 1300px) {
+    /* Cards */
+    .card-title {
+        font-size: 1.125rem !important; /* 18px */
+    }
+    
+    .card-subtitle {
+        font-size: 0.875rem !important; /* 14px */
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.9375rem; /* 15px */
+        padding: 0.625rem 1.125rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.8125rem; /* 13px */
+        padding: 0.5rem 0.875rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem; /* 16px */
+        padding: 0.75rem 1.5rem;
+    }
+    
+    /* Forms */
+    .form-label {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    /* Tables */
+    .table {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    .table th {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    /* Badges */
+    .badge {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Navigation */
+    .sidebar-link {
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    .top-nav {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Stats Grid - smaller fonts for 1300px */
+    .stat-card {
+        padding: 1.25rem; /* Slightly smaller padding */
+    }
+    
+    .stat-info h3 {
+        font-size: 2rem !important; /* 32px instead of 48px */
+    }
+    
+    .stat-info p {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    .stat-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 1.5rem; /* Smaller icon */
+    }
+    
+    /* Receipt Image - fixed dimensions */
+    .receipt-image-section img {
+        width: 400px;
+        height: auto;
+        max-height: 600px;
+        object-fit: contain;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+    
+    .receipt-image-section img:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* ===== Tablets (1024px and below) ===== */
+@media (max-width: 1024px) {
+    /* Cards */
+    .card-title {
+        font-size: 1rem !important; /* 16px */
+    }
+    
+    .card-subtitle {
+        font-size: 0.8125rem !important; /* 13px */
+    }
+    
+    .card-text {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.5625rem 1rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.4375rem 0.75rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.9375rem; /* 15px */
+        padding: 0.6875rem 1.375rem;
+    }
+    
+    /* Forms */
+    .form-label {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.5625rem 0.75rem;
+    }
+    
+    .form-help {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    /* Modal */
+    .modal-title {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .modal-body {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Receipts */
+    .receipt-title {
+        font-size: 1rem; /* 16px */
+    }
+    
+    .receipt-amount {
+        font-size: 1.125rem; /* 18px */
+    }
+    
+    .product-name {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Stats Grid */
+    .stat-info h3 {
+        font-size: 1.75rem !important; /* 28px */
+    }
+    
+    .stat-info p {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    .stat-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 1.375rem;
+    }
+    
+    /* Receipt Image */
+    .receipt-image-section img {
+        width: 350px;
+        max-height: 500px;
+    }
+}
+
+/* ===== Mobile landscape (768px and below) ===== */
+@media (max-width: 768px) {
+    /* Cards */
+    .card-title {
+        font-size: 0.9375rem !important; /* 15px */
+    }
+    
+    .card-subtitle {
+        font-size: 0.75rem !important; /* 12px */
+    }
+    
+    .card-text {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.8125rem; /* 13px */
+        padding: 0.5rem 0.875rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.6875rem; /* 11px */
+        padding: 0.375rem 0.625rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.875rem; /* 14px */
+        padding: 0.625rem 1.25rem;
+    }
+    
+    /* Forms */
+    .form-label {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 0.8125rem; /* 13px */
+        padding: 0.5rem 0.625rem;
+    }
+    
+    .form-help {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    /* Navigation */
+    .sidebar-link {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    .mobile-nav-item {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    /* Dashboard stats */
+    .stat-value {
+        font-size: 1.5rem !important; /* 24px */
+    }
+    
+    .stat-label {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    .stat-info h3 {
+        font-size: 1.5rem !important; /* 24px */
+    }
+    
+    .stat-info p {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+    
+    /* Receipts */
+    .receipt-title {
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    .receipt-amount {
+        font-size: 1rem; /* 16px */
+    }
+    
+    .product-name {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    .product-price {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Receipt Image */
+    .receipt-image-section img {
+        width: 100%;
+        max-width: 300px;
+        max-height: 450px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Hide assistant suggestions on mobile */
+    .assistant-suggestions-wrapper {
+        display: none !important;
+    }
+    
+    /* Stats Card Value - below 700px */
+    .stats-card-value {
+        font-size: 1.25rem !important; /* 20px for small screens */
+    }
+    
+    /* ===== MOBILE ASSISTANT VIEW - STICKY INPUT ===== */
+    /* Make assistant input sticky to bottom navigation on mobile */
+    #assistant-view .assistant-container {
+        height: calc(100vh - 180px) !important;
+    }
+    
+    #assistant-view .assistant-chat-wrapper {
+        /* Reduce bottom padding to make room for fixed input */
+        padding-bottom: calc(140px + var(--bottom-nav-height)) !important;
+    }
+    
+    #assistant-view .assistant-input-wrapper {
+        position: fixed !important;
+        bottom: var(--bottom-nav-height) !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 100 !important;
+        border-top: 2px solid var(--border-color);
+        background: var(--bg-primary) !important;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        padding: 1rem !important;
+        margin: 0 !important;
+    }
+    
+    #assistant-view .assistant-input-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    /* Hide the hint text on mobile to save space */
+    #assistant-view .assistant-input-footer {
+        display: none !important;
+    }
+}
+
+/* ===== Mobile portrait (480px and below) ===== */
+@media (max-width: 480px) {
+    /* Cards */
+    .card-title {
+        font-size: 0.875rem !important; /* 14px */
+    }
+    
+    .card-subtitle {
+        font-size: 0.6875rem !important; /* 11px */
+    }
+    
+    .card-text {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.4375rem 0.75rem;
+    }
+    
+    .btn-sm {
+        font-size: 0.625rem; /* 10px */
+        padding: 0.3125rem 0.5rem;
+    }
+    
+    .btn-lg {
+        font-size: 0.8125rem; /* 13px */
+        padding: 0.5625rem 1.125rem;
+    }
+    
+    /* Forms */
+    .form-label {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 0.75rem; /* 12px */
+        padding: 0.4375rem 0.5rem;
+    }
+    
+    .form-help {
+        font-size: 0.625rem; /* 10px */
+    }
+    
+    /* Modal */
+    .modal-title {
+        font-size: 1rem; /* 16px */
+    }
+    
+    .modal-body {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    /* Tables */
+    .table {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    .table th {
+        font-size: 0.625rem; /* 10px */
+    }
+    
+    /* Dashboard stats */
+    .stat-value {
+        font-size: 1.25rem !important; /* 20px */
+    }
+    
+    .stat-label {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    .stat-info h3 {
+        font-size: 1.25rem !important; /* 20px */
+    }
+    
+    .stat-info p {
+        font-size: 0.625rem; /* 10px */
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    /* Navigation */
+    .mobile-nav-item {
+        font-size: 0.625rem; /* 10px */
+    }
+    
+    /* Badges */
+    .badge {
+        font-size: 0.625rem; /* 10px */
+        padding: 0.1875rem 0.375rem;
+    }
+    
+    /* Receipts */
+    .receipt-title {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    .receipt-amount {
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    .product-name {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    .product-price {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    /* Receipt Image */
+    .receipt-image-section img {
+        width: 100%;
+        max-width: 250px;
+        max-height: 400px;
+    }
+    
+    /* Toasts/Notifications */
+    .toast {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    .notification-title {
+        font-size: 0.8125rem; /* 13px */
+    }
+    
+    .notification-body {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    /* ===== MOBILE ASSISTANT VIEW - STICKY INPUT ===== */
+    /* Ensure input stays fixed on smaller mobile devices */
+    #assistant-view .assistant-input-wrapper {
+        padding: 0.75rem !important;
+    }
+    
+    #assistant-view .assistant-input {
+        font-size: 0.85rem !important;
+    }
+    
+    #assistant-view .assistant-send-btn {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* ===== Very small devices (360px and below) ===== */
+@media (max-width: 360px) {
+    /* Additional adjustments for very small screens */
+    .card-title {
+        font-size: 0.8125rem !important; /* 13px */
+    }
+    
+    .btn {
+        font-size: 0.6875rem; /* 11px */
+        padding: 0.375rem 0.625rem;
+    }
+    
+    .form-input,
+    .form-textarea,
+    .form-select {
+        font-size: 0.6875rem; /* 11px */
+    }
+    
+    .stat-value {
+        font-size: 1.125rem !important; /* 18px */
+    }
+    
+    .stat-info h3 {
+        font-size: 1.125rem !important; /* 18px */
+    }
+    
+    .stat-info p {
+        font-size: 0.5625rem; /* 9px */
+    }
+    
+    .stat-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.875rem;
+    }
+    
+    .mobile-nav-item {
+        font-size: 0.5625rem; /* 9px */
+    }
+    
+    /* Receipt Image */
+    .receipt-image-section img {
+        width: 100%;
+        max-width: 220px;
+        max-height: 350px;
+    }
+    
+    /* ===== MOBILE ASSISTANT VIEW - STICKY INPUT ===== */
+    /* Fine-tune for very small screens */
+    #assistant-view .assistant-input-wrapper {
+        padding: 0.65rem !important;
+    }
+    
+    #assistant-view .assistant-input-container {
+        gap: 0.5rem !important;
+    }
+    
+    #assistant-view .assistant-input {
+        font-size: 0.8rem !important;
+        padding: 0.6rem 0.75rem !important;
+    }
+    
+    #assistant-view .assistant-send-btn {
+        width: 38px !important;
+        height: 38px !important;
+    }
+}
+
+/* ===== Utility classes for responsive text ===== */
+.text-responsive {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+}
+
+.heading-responsive {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+/* Prevent text from being too small on any device */
+@media (max-width: 320px) {
+    body {
+        font-size: max(13px, 1rem) !important;
+    }
+    
+    .btn,
+    .form-input,
+    .form-select,
+    .form-textarea {
+        font-size: max(11px, 0.75rem);
+    }
+}
+
+/* ===== Receipt Image Fullscreen Modal ===== */
+.receipt-image-fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: fadeIn 0.2s ease;
+}
+
+.receipt-image-fullscreen-modal.active {
+    display: flex;
+}
+
+.receipt-image-fullscreen-modal img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+    cursor: zoom-out;
+}
+
+/* Hide close button - click anywhere to close */
+.receipt-image-fullscreen-close {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

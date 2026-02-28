@@ -1,0 +1,96 @@
+<div id="limits-view" class="content-view">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-chart-pie"></i> Zarządzanie Limitami</h1>
+                    <div class="page-actions">
+                        <button id="add-limit-btn" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Dodaj limit
+                        </button>
+                    </div>
+                </div>
+
+                <div id="limits-list" class="limits-grid"></div>
+
+                <!-- Add Limit Modal -->
+                <div id="add-limit-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><i class="fas fa-plus-circle"></i> Dodaj Nowy Limit</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="add-limit-form">
+                                <div class="form-group">
+                                    <label for="add-limit-category" class="form-label">
+                                        <i class="fas fa-tag"></i> Kategoria
+                                    </label>
+                                    <select id="add-limit-category" class="form-input" required>
+                                        <option value="">Wybierz kategorię...</option>
+                                    </select>
+                                    <span class="form-error" id="add-limit-category-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="add-limit-amount" class="form-label">
+                                        <i class="fas fa-wallet"></i> Limit (zł)
+                                    </label>
+                                    <input type="number" id="add-limit-amount" class="form-input" 
+                                           step="0.01" min="0" placeholder="np. 500.00" required>
+                                    <span class="form-error" id="add-limit-amount-error"></span>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-secondary close-modal">
+                                        <i class="fas fa-times"></i> Anuluj
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Zapisz limit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edit Limit Modal -->
+                <div id="edit-limit-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><i class="fas fa-edit"></i> Edytuj Limit</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="edit-limit-form">
+                                <input type="hidden" id="edit-limit-id">
+                                <input type="hidden" id="edit-limit-category-name">
+                                
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <i class="fas fa-tag"></i> Kategoria
+                                    </label>
+                                    <div class="form-input-readonly" id="edit-limit-category-display">
+                                        <!-- Category name will be displayed here -->
+                                    </div>
+                                    <small class="form-hint">Kategoria nie może być zmieniona podczas edycji</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="edit-limit-amount" class="form-label">
+                                        <i class="fas fa-wallet"></i> Nowy Limit (zł)
+                                    </label>
+                                    <input type="number" id="edit-limit-amount" class="form-input" 
+                                           step="0.01" min="0" placeholder="np. 500.00" required>
+                                    <span class="form-error" id="edit-limit-amount-error"></span>
+                                </div>
+                                <div class="limit-current-spending" id="edit-limit-current-info">
+                                    <!-- Current spending info will be displayed here -->
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-secondary close-modal">
+                                        <i class="fas fa-times"></i> Anuluj
+                                    </button>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fas fa-save"></i> Zapisz zmiany
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>

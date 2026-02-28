@@ -1,0 +1,82 @@
+<div id="search-view" class="content-view">
+                <div class="page-header">
+                    <h1 class="page-title"> Wyszukiwarka produktów</h1>
+                    <div class="page-actions">
+                        <button class="btn btn-secondary" id="toggle-search-filters">
+                            <i class="fas fa-filter"></i> Filtry
+                        </button>
+                    </div>
+                </div>
+
+                <div class="search-page-container">
+                    <div class="search-main-section">
+                        <div class="search-bar-large">
+                            <input type="text" id="search-page-input" placeholder="Wpisz nazwę produktu (min. 3 znaki)...">
+                        </div>
+                        <div id="search-page-hint" class="search-hint">
+                            Wpisz przynajmniej 3 znaki, aby rozpocząć wyszukiwanie.
+                        </div>
+                    </div>
+
+                    <!-- Filters Panel -->
+                    <div class="search-filters-panel hidden" id="search-filters-panel">
+                        <div class="search-filters-header">
+                            <h3><i class="fas fa-filter"></i> Filtry wyszukiwania</h3>
+                            <button class="btn btn-text" id="clear-all-filters">Wyczyść filtry</button>
+                        </div>
+                        <div class="search-filters-content">
+                            <div class="filter-group">
+                                <label class="filter-label">Zakres cen</label>
+                                <div class="filter-row">
+                                    <input type="number" id="filter-price-min" class="form-input" placeholder="Od" step="0.01" min="0">
+                                    <span class="filter-separator">-</span>
+                                    <input type="number" id="filter-price-max" class="form-input" placeholder="Do" step="0.01" min="0">
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Sklep</label>
+                                <input type="text" id="filter-store" class="form-input" placeholder="Wpisz nazwę sklepu...">
+                            </div>
+                            <div class="filter-group">
+                                <label class="filter-label">Data zakupu</label>
+                                <div class="filter-row">
+                                    <input type="date" id="filter-date-from" class="form-input">
+                                    <span class="filter-separator">-</span>
+                                    <input type="date" id="filter-date-to" class="form-input">
+                                </div>
+                            </div>
+                            <div class="filter-group">
+                                <button class="btn btn-primary" id="apply-filters" style="width: 100%;">
+                                    <i class="fas fa-check"></i> Zastosuj filtry
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Filters -->
+                    <div class="active-filters hidden" id="active-filters"></div>
+
+                    <!-- Sort and Stats Bar -->
+                    <div class="search-toolbar">
+                        <div class="search-stats" id="search-stats"></div>
+                        <div class="search-sort" id="search-sort">
+                            <label for="sort-select" style="font-size: 14px; color: var(--gray-600); margin-right: 8px;">
+                                <i class="fas fa-sort"></i> Sortuj:
+                            </label>
+                            <select id="sort-select" class="form-select" style="width: auto; padding: 8px 32px 8px 12px;">
+                                <option value="relevance">Trafność</option>
+                                <option value="name-asc">Nazwa (A-Z)</option>
+                                <option value="name-desc">Nazwa (Z-A)</option>
+                                <option value="price-asc">Cena (rosnąco)</option>
+                                <option value="price-desc">Cena (malejąco)</option>
+                                <option value="date-desc">Data (najnowsze)</option>
+                                <option value="date-asc">Data (najstarsze)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="search-page-results" class="search-results-grid"></div>
+                    
+                    <div id="search-page-detail" class="search-detail-panel hidden"></div>
+                </div>
+            </div>

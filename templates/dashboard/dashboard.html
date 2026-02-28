@@ -1,0 +1,180 @@
+<div id="dashboard-view" class="content-view active">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title"><i class="fas fa-home"></i> Dashboard</h1>
+                        <p class="page-subtitle">Przegląd Twoich wydatków i paragonów</p>
+                    </div>
+                    <div class="page-actions">
+                        <a href="#" data-view="scan" class="btn btn-primary">
+                            <i class="fas fa-camera"></i> Skanuj paragon
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Action Tiles -->
+                <div class="quick-actions-section">
+                    <h2><i class="fas fa-bolt"></i> Szybkie akcje</h2>
+                    <div class="quick-actions-grid">
+                        <button class="action-tile action-tile-featured" data-view="assistant">
+                            <div class="tile-icon gradient-ai">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>Asystent AI</h3>
+                            <p>Zapytaj o finanse</p>
+                            <span class="tile-badge">Nowość</span>
+                        </button>
+                        <button class="action-tile" data-view="scan">
+                            <div class="tile-icon blue">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <h3>Skanuj</h3>
+                            <p>Dodaj nowy paragon</p>
+                        </button>
+                        <button class="action-tile" data-view="receipts">
+                            <div class="tile-icon green">
+                                <i class="fas fa-file-invoice"></i>
+                            </div>
+                            <h3>Paragony</h3>
+                            <p>Przeglądaj wszystkie</p>
+                        </button>
+                        <button class="action-tile" data-view="limits">
+                            <div class="tile-icon orange">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3>Limity</h3>
+                            <p>Zarządzaj budżetem</p>
+                        </button>
+                        <button class="action-tile" data-view="reports">
+                            <div class="tile-icon purple">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Raporty</h3>
+                            <p>Analizy i wykresy</p>
+                        </button>
+                        <button class="action-tile" data-view="shopping-lists">
+                            <div class="tile-icon teal">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3>Listy</h3>
+                            <p>Listy zakupów</p>
+                        </button>
+                        <button class="action-tile" data-view="profile">
+                            <div class="tile-icon indigo">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Profil</h3>
+                            <p>Ustawienia konta</p>
+                        </button>
+                        <button class="action-tile" data-view="search">
+                            <div class="tile-icon pink">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3>Wyszukiwarka</h3>
+                            <p>Znajdź produkty</p>
+                        </button>
+                        <button class="action-tile" data-view="notifications">
+                            <div class="tile-icon red">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3>Powiadomienia</h3>
+                            <p>Zobacz alerty</p>
+                        </button>
+                        <button class="action-tile" data-view="guide">
+                            <div class="tile-icon slate">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>Instrukcja</h3>
+                            <p>Poznaj system</p>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stats-card stats-card-primary">
+                        <div class="stats-card-icon">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value" id="total-receipts">0</div>
+                            <div class="stats-card-label">Paragonów</div>
+                            <div class="stats-card-change positive">
+                                <i class="fas fa-arrow-up"></i> W tym miesiącu
+                            </div>
+                        </div>
+                        <div class="stats-card-circle"></div>
+                    </div>
+                    
+                    <div class="stats-card stats-card-success">
+                        <div class="stats-card-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value" id="total-spent">0</div>
+                            <div class="stats-card-label">PLN wydano</div>
+                            <div class="stats-card-change">
+                                <i class="fas fa-calendar"></i> W tym miesiącu
+                            </div>
+                        </div>
+                        <div class="stats-card-circle"></div>
+                    </div>
+                    
+                    <div class="stats-card stats-card-warning">
+                        <div class="stats-card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value" id="limit-warnings">0</div>
+                            <div class="stats-card-label">Ostrzeżenia o limitach</div>
+                            <div class="stats-card-change">
+                                <i class="fas fa-info-circle"></i> Zobacz szczegóły
+                            </div>
+                        </div>
+                        <div class="stats-card-circle"></div>
+                    </div>
+                    
+                    <div class="stats-card stats-card-secondary">
+                        <div class="stats-card-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div class="stats-card-content">
+                            <div class="stats-card-value" id="total-products">0</div>
+                            <div class="stats-card-label">Produktów</div>
+                            <div class="stats-card-change positive">
+                                <i class="fas fa-arrow-up"></i> W bazie danych
+                            </div>
+                        </div>
+                        <div class="stats-card-circle"></div>
+                    </div>
+                </div>
+
+                <!-- Product Search -->
+                <div class="product-search-section">
+                    <h2></i> Wyszukiwarka produktów</h2>
+                    <div class="product-search-bar">
+                        <input type="text" id="product-search-input" placeholder="Wpisz nazwę produktu (min. 3 znaki)">
+                    </div>
+                    <div id="product-search-hint" class="product-search-hint">
+                        Wpisz przynajmniej 3 znaki, aby rozpocząć wyszukiwanie.
+                    </div>
+                    <div id="product-search-results" class="product-search-results"></div>
+                    <div id="product-search-detail" class="product-search-detail hidden"></div>
+                </div>
+
+                <!-- Notifications -->
+                <div id="notifications-container" class="notifications-section">
+                    <div class="section-header-with-action">
+                        <h2><i class="fas fa-bell"></i> Powiadomienia</h2>
+                        <button class="btn btn-sm btn-secondary" data-view="notifications">
+                            <i class="fas fa-list"></i> Zobacz wszystkie (<span id="total-notifications-count">0</span>)
+                        </button>
+                    </div>
+                    <div id="notifications-list" class="notifications-list"></div>
+                </div>
+
+                <!-- Recent Receipts -->
+                <div class="recent-receipts">
+                    <h2><i class="fas fa-history"></i> Ostatnie paragony</h2>
+                    <div id="recent-receipts-list" class="receipts-grid"></div>
+                </div>
+            </div>

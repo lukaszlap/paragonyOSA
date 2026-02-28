@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Paragony - Inteligentne zarządzanie paragonami z AI</title>
+    <meta name="description" content="Skanuj paragony automatycznie dzięki AI. Kontroluj budżet, analizuj wydatki, otrzymuj inteligentne sugestie zakupów. Zarejestruj się za darmo!">
+    <meta name="keywords" content="paragony, skanowanie, AI, budżet, wydatki, OCR, zarządzanie finansami">
+    <meta name="author" content="Paragony">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://paragony.app/">
+    <meta property="og:title" content="Paragony - Zarządzaj paragonami inteligentnie">
+    <meta property="og:description" content="Automatyczne skanowanie paragonów, kontrola budżetu i inteligentna analiza wydatków">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Paragony - Inteligentne zarządzanie paragonami">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/static/css/main/main-landing.css">
+    <link rel="stylesheet" href="/static/css/main/dashboard-preview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="landing-nav" id="landing-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-receipt"></i>
+                <span>Paragony</span>
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#features" class="nav-link">Funkcje</a></li>
+                <li><a href="#how-it-works" class="nav-link">Jak działa</a></li>
+                <li><a href="#benefits" class="nav-link">Korzyści</a></li>
+                <li><a href="#pricing" class="nav-link">Cennik</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="index.html" class="nav-btn btn-login">Zaloguj się</a></li>
+                <li><a href="index.html#register" class="nav-btn btn-register">Załóż konto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="floating-icon" style="--delay: 0s; --duration: 8s;">
+                <i class="fas fa-receipt"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 2s; --duration: 10s;">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 4s; --duration: 12s;">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="floating-icon" style="--delay: 1s; --duration: 9s;">
+                <i class="fas fa-coins"></i>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content reveal">
+                <h1 class="hero-title">
+                    Zarządzaj paragonami <span class="gradient-text">inteligentnie</span> z AI
+                </h1>
+                <p class="hero-subtitle">
+                    Automatyczne skanowanie, analiza wydatków i kontrola budżetu. 
+                    Wszystko w jednym miejscu, napędzane sztuczną inteligencją.
+                </p>
+                <div class="hero-buttons">
+                    <a href="index.html#register" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Zacznij za darmo
+                    </a>
+                    <a href="#demo" class="btn btn-secondary btn-large">
+                        <i class="fas fa-play-circle"></i> Zobacz demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span>
+                        <span class="stat-label">Użytkowników</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50000">0</span>
+                        <span class="stat-label">Zeskanowanych paragonów</span>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number-container">
+                            <span class="stat-number" data-target="99">0</span><span class="stat-number">%</span>
+                        </div>
+                        <span class="stat-label">Dokładność AI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image reveal">
+                <div class="dashboard-preview">
+                    <div class="dashboard-header">
+                        <div class="dashboard-title">
+                            <i class="fas fa-chart-line"></i>
+                            Dashboard
+                        </div>
+                        <div class="dashboard-date">Listopad 2025</div>
+                    </div>
+                    
+                    <div class="preview-stats-grid">
+                        <div class="preview-stat-card">
+                            <div class="preview-stat-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="preview-stat-value">127</div>
+                            <div class="preview-stat-label">Paragonów</div>
+                        </div>
+                        
+                        <div class="preview-stat-card">
+                            <div class="preview-stat-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="preview-stat-value">3,450</div>
+                            <div class="preview-stat-label">PLN wydano</div>
+                        </div>
+                        
+                        <div class="preview-stat-card">
+                            <div class="preview-stat-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <div class="preview-stat-value">842</div>
+                            <div class="preview-stat-label">Produktów</div>
+                        </div>
+                        
+                        <div class="preview-stat-card">
+                            <div class="preview-stat-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="preview-stat-value">8/12</div>
+                            <div class="preview-stat-label">Limity OK</div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-chart">
+                        <div class="preview-chart-title">Wydatki w tym tygodniu</div>
+                        <div class="preview-chart-bars">
+                            <div class="preview-chart-bar" style="height: 60%;"></div>
+                            <div class="preview-chart-bar" style="height: 80%;"></div>
+                            <div class="preview-chart-bar" style="height: 45%;"></div>
+                            <div class="preview-chart-bar" style="height: 90%;"></div>
+                            <div class="preview-chart-bar" style="height: 70%;"></div>
+                            <div class="preview-chart-bar" style="height: 55%;"></div>
+                            <div class="preview-chart-bar" style="height: 40%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="preview-receipts">
+                        <div class="preview-receipts-title">Ostatnie paragony</div>
+                        <div class="preview-receipt-item">
+                            <div class="preview-receipt-icon">
+                                <i class="fas fa-shopping-basket"></i>
+                            </div>
+                            <div class="preview-receipt-info">
+                                <div class="preview-receipt-name">Biedronka</div>
+                                <div class="preview-receipt-date">Dziś, 14:30</div>
+                            </div>
+                            <div class="preview-receipt-amount">89.50 zł</div>
+                        </div>
+                        
+                        <div class="preview-receipt-item">
+                            <div class="preview-receipt-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="preview-receipt-info">
+                                <div class="preview-receipt-name">Lidl</div>
+                                <div class="preview-receipt-date">Wczoraj, 18:15</div>
+                            </div>
+                            <div class="preview-receipt-amount">124.20 zł</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="arrow"></span>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="demo-section" id="demo">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Zobacz <span class="gradient-text">jak to działa</span></h2>
+                <p class="section-subtitle">Interaktywna demonstracja najważniejszych funkcji</p>
+            </div>
+            
+            <div class="demo-tabs-container reveal">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-demo="scanning">
+                        <i class="fas fa-camera"></i> Skanowanie AI
+                    </button>
+                    <button class="demo-tab" data-demo="dashboard">
+                        <i class="fas fa-chart-line"></i> Dashboard
+                    </button>
+                    <button class="demo-tab" data-demo="limits">
+                        <i class="fas fa-chart-pie"></i> Limity
+                    </button>
+                    <button class="demo-tab" data-demo="assistant">
+                        <i class="fas fa-robot"></i> Asystent AI
+                    </button>
+                </div>
+                
+                <!-- Scanning Demo -->
+                <div class="demo-content active" id="demo-scanning">
+                    <div class="demo-grid-horizontal">
+                        <div class="demo-visual">
+                            <div class="demo-phone">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">
+                                    <!-- Camera View -->
+                                    <div class="app-view camera-view" id="scan-camera-view">
+                                        <div class="camera-overlay">
+                                            <div class="scan-frame">
+                                                <div class="scan-corner tl"></div>
+                                                <div class="scan-corner tr"></div>
+                                                <div class="scan-corner bl"></div>
+                                                <div class="scan-corner br"></div>
+                                            </div>
+                                            <div class="scan-beam"></div>
+                                            <div class="ocr-highlights" id="ocr-highlights">
+                                                <!-- JS will inject boxes here -->
+                                            </div>
+                                        </div>
+                                        <div class="receipt-paper">
+                                            <div class="receipt-header">
+                                                <div class="r-logo"></div>
+                                                <div class="r-line w-50 center"></div>
+                                                <div class="r-line w-30 center"></div>
+                                            </div>
+                                            <div class="receipt-body">
+                                                <div class="r-row"><div class="r-text w-60"></div><div class="r-price w-20"></div></div>
+                                                <div class="r-row"><div class="r-text w-50"></div><div class="r-price w-20"></div></div>
+                                                <div class="r-row"><div class="r-text w-70"></div><div class="r-price w-20"></div></div>
+                                                <div class="r-row"><div class="r-text w-40"></div><div class="r-price w-20"></div></div>
+                                                <div class="r-divider"></div>
+                                                <div class="r-row total"><div class="r-text w-30"></div><div class="r-price w-30"></div></div>
+                                            </div>
+                                        </div>
+                                        <div class="camera-controls">
+                                            <div class="shutter-button" id="demo-shutter"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Processing View -->
+                                    <div class="app-view processing-view hidden" id="scan-processing-view">
+                                        <div class="processing-content">
+                                            <div class="ai-brain-pulse">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <div class="processing-steps">
+                                                <div class="step completed"><i class="fas fa-check"></i> Przetwarzanie obrazu</div>
+                                                <div class="step active"><i class="fas fa-circle-notch fa-spin"></i> Analiza OCR</div>
+                                                <div class="step pending"><i class="far fa-circle"></i> Kategoryzacja</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Result View -->
+                                    <div class="app-view result-view hidden" id="scan-result-view">
+                                        <div class="result-header">
+                                            <div class="success-badge"><i class="fas fa-check"></i></div>
+                                            <h3>Sukces!</h3>
+                                        </div>
+                                        <div class="scanned-receipt-card">
+                                            <div class="receipt-store">
+                                                <i class="fas fa-store"></i> <span id="scan-store-name">Biedronka</span>
+                                            </div>
+                                            <div class="receipt-date">12.10.2025</div>
+                                            <div class="receipt-items-list" id="scan-items-list">
+                                                <!-- Items injected by JS -->
+                                            </div>
+                                            <div class="receipt-total-row">
+                                                <span>Suma</span>
+                                                <span class="total-amount">156.80 zł</span>
+                                            </div>
+                                        </div>
+                                        <button class="btn-app-primary">Zapisz paragon</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h3>Skanowanie z AI w 5 sekund</h3>
+                            <p>Zobacz jak nasza sztuczna inteligencja przetwarza paragon w czasie rzeczywistym:</p>
+                            <ul class="demo-features-list">
+                                <li><i class="fas fa-check"></i> <strong>OCR:</strong> Błyskawiczne odczytywanie tekstu</li>
+                                <li><i class="fas fa-check"></i> <strong>Ekstrakcja:</strong> Wyciąganie produktów i cen</li>
+                                <li><i class="fas fa-check"></i> <strong>Kategoryzacja:</strong> Automatyczne przypisywanie kategorii</li>
+                            </ul>
+                            <button class="btn btn-primary" id="demo-scan-btn">
+                                <i class="fas fa-play"></i> Uruchom symulację
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Demo -->
+                <div class="demo-content" id="demo-dashboard">
+                    <div class="demo-grid-horizontal">
+                        <div class="demo-visual">
+                            <div class="laptop-frame">
+                                <div class="laptop-screen">
+                                    <div class="virtual-cursor" id="demo-cursor"></div>
+                                    <div class="dashboard-ui">
+                                        <div class="dash-sidebar">
+                                            <div class="dash-nav-item active"><i class="fas fa-home"></i></div>
+                                            <div class="dash-nav-item"><i class="fas fa-chart-pie"></i></div>
+                                            <div class="dash-nav-item"><i class="fas fa-wallet"></i></div>
+                                        </div>
+                                        <div class="dash-main">
+                                            <div class="dash-header">
+                                                <div class="dash-title-bar"></div>
+                                                <div class="dash-user"></div>
+                                            </div>
+                                            <div class="dash-stats-row">
+                                                <div class="d-stat-card" id="d-stat-1">
+                                                    <div class="d-icon blue"><i class="fas fa-receipt"></i></div>
+                                                    <div class="d-val">42</div>
+                                                    <div class="d-lbl">Paragony</div>
+                                                </div>
+                                                <div class="d-stat-card" id="d-stat-2">
+                                                    <div class="d-icon green"><i class="fas fa-coins"></i></div>
+                                                    <div class="d-val">2,450 zł</div>
+                                                    <div class="d-lbl">Wydatki</div>
+                                                </div>
+                                            </div>
+                                            <div class="dash-chart-container">
+                                                <div class="chart-bars-wrapper" id="demo-chart-bars">
+                                                    <!-- Bars injected by JS -->
+                                                </div>
+                                                <div class="chart-tooltip hidden" id="demo-chart-tooltip">
+                                                    <div class="tooltip-date">Poniedziałek</div>
+                                                    <div class="tooltip-val">145.00 zł</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="laptop-base"></div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h3>Interaktywny Dashboard</h3>
+                            <p>Pełna kontrola nad finansami dzięki przejrzystym wykresom:</p>
+                            <ul class="demo-features-list">
+                                <li><i class="fas fa-check"></i> Interaktywne wykresy wydatków</li>
+                                <li><i class="fas fa-check"></i> Filtrowanie po dacie i kategorii</li>
+                                <li><i class="fas fa-check"></i> Szczegółowe podsumowania</li>
+                            </ul>
+                            <button class="btn btn-primary" id="demo-dashboard-btn">
+                                <i class="fas fa-play"></i> Zobacz interakcję
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Limits Demo -->
+                <div class="demo-content" id="demo-limits">
+                    <div class="demo-grid-horizontal">
+                        <div class="demo-visual">
+                            <div class="demo-phone">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">
+                                    <div class="app-view limits-view">
+                                        <div class="app-header">
+                                            <h4>Moje Limity</h4>
+                                        </div>
+                                        <div class="limits-list" id="demo-limits-list">
+                                            <!-- Limits injected by JS -->
+                                        </div>
+                                        
+                                        <!-- Transaction Notification Toast -->
+                                        <div class="transaction-toast hidden" id="demo-transaction-toast">
+                                            <div class="t-icon"><i class="fas fa-shopping-cart"></i></div>
+                                            <div class="t-content">
+                                                <div class="t-title">Nowy paragon</div>
+                                                <div class="t-desc">Biedronka: 124.50 zł</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Alert Modal -->
+                                        <div class="limit-alert-modal hidden" id="demo-limit-alert">
+                                            <div class="alert-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                                            <h3>Przekroczono limit!</h3>
+                                            <p>Kategoria: <strong>Żywność</strong></p>
+                                            <p>Przekroczenie o: <span class="red-text">24.50 zł</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h3>Inteligentne Limity</h3>
+                            <p>System automatycznie pilnuje Twojego budżetu:</p>
+                            <ul class="demo-features-list">
+                                <li><i class="fas fa-check"></i> Powiadomienia w czasie rzeczywistym</li>
+                                <li><i class="fas fa-check"></i> Automatyczna aktualizacja po skanie</li>
+                                <li><i class="fas fa-check"></i> Ostrzeżenia przed przekroczeniem</li>
+                            </ul>
+                            <button class="btn btn-primary" id="demo-limits-btn">
+                                <i class="fas fa-play"></i> Symuluj zakup
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Assistant Demo -->
+                <div class="demo-content" id="demo-assistant">
+                    <div class="demo-grid-horizontal">
+                        <div class="demo-visual">
+                            <div class="chat-interface-demo">
+                                <div class="chat-header">
+                                    <div class="assistant-avatar">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="assistant-info">
+                                        <div class="name">Asystent Finansowy</div>
+                                        <div class="status">Online</div>
+                                    </div>
+                                </div>
+                                <div class="chat-messages" id="demo-chat-messages">
+                                    <!-- Messages injected by JS -->
+                                </div>
+                                <div class="chat-input-area">
+                                    <div class="chat-input-fake" id="demo-chat-input"></div>
+                                    <div class="send-btn"><i class="fas fa-paper-plane"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h3>Rozmawiaj z Finansami</h3>
+                            <p>Zadawaj pytania naturalnym językiem:</p>
+                            <ul class="demo-features-list">
+                                <li><i class="fas fa-check"></i> "Ile wydałem na paliwo?"</li>
+                                <li><i class="fas fa-check"></i> "Gdzie kupuję najtaniej?"</li>
+                                <li><i class="fas fa-check"></i> "Porównaj wydatki z zeszłym miesiącem"</li>
+                            </ul>
+                            <button class="btn btn-primary" id="demo-assistant-btn">
+                                <i class="fas fa-play"></i> Zadaj pytanie
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Potężne funkcje, proste w użyciu</h2>
+                <p class="section-subtitle">Wszystko czego potrzebujesz do zarządzania wydatkami w jednej aplikacji</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="feature-title">Skanowanie paragonów</h3>
+                    <p class="feature-description">
+                        Automatyczne rozpoznawanie produktów, cen i kategorii dzięki zaawansowanej technologii OCR i AI Gemini
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon green">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="feature-title">Dashboard</h3>
+                    <p class="feature-description">
+                        Przejrzyste wykresy i statystyki pokazujące twoje wzorce wydatków w czasie rzeczywistym
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="feature-title">Limity budżetowe</h3>
+                    <p class="feature-description">
+                        Ustaw limity dla kategorii wydatków i otrzymuj powiadomienia przed ich przekroceniem
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Raporty i analizy</h3>
+                    <p class="feature-description">
+                        Generuj szczegółowe raporty wydatków z wykresami, trendami i możliwością eksportu do PDF i Excel
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon teal">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="feature-title">Listy zakupów</h3>
+                    <p class="feature-description">
+                        Twórz inteligentne listy zakupów na podstawie historii i ulubionych produktów
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon red">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">Asystent AI</h3>
+                    <p class="feature-description">
+                        Wirtualny asystent odpowiada na pytania o wydatki, proponuje przepisy i pomaga zaoszczędzić
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon indigo">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3 class="feature-title">Zarządzanie paragonami</h3>
+                    <p class="feature-description">
+                        Przeglądaj, edytuj, kategoryzuj i wyszukuj wszystkie swoje paragony w jednym miejscu
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon pink">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="feature-title">Wyszukiwarka produktów</h3>
+                    <p class="feature-description">
+                        Błyskawicznie przeszukuj wszystkie produkty z historii zakupów z zaawansowanymi filtrami
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon slate">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="feature-title">Powiadomienia</h3>
+                    <p class="feature-description">
+                        Otrzymuj alerty o przekroczeniu limitów, niskich stanach produktów i ważnych wydarzeniach
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon cyan">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="feature-title">Profil użytkownika</h3>
+                    <p class="feature-description">
+                        Zarządzaj kontem, ustawieniami, kluczami API, przeglądaj logi aktywności i zmień hasło
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon amber">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="feature-title">Instrukcja i pomoc</h3>
+                    <p class="feature-description">
+                        Kompleksowy przewodnik po systemie z przykładami, poradami i najlepszymi praktykami
+                    </p>
+                </div>
+                
+                <div class="feature-card reveal">
+                    <div class="feature-icon emerald">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Responsywny interfejs</h3>
+                    <p class="feature-description">
+                        Pełna funkcjonalność na komputerze, tablecie i smartfonie - wszędzie tam gdzie jesteś
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Jak to działa?</h2>
+                <p class="section-subtitle">Zacznij zarządzać wydatkami w 4 prostych krokach</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon blue">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <h3 class="timeline-title">Zarejestruj się</h3>
+                        <p class="timeline-description">
+                            Szybka rejestracja w mniej niż 30 sekund. Wystarczy email i hasło.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon green">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3 class="timeline-title">Skanuj paragon</h3>
+                        <p class="timeline-description">
+                            Zrób zdjęcie paragonu lub prześlij gotowy plik. Obsługujemy wszystkie popularne formaty.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon orange">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="timeline-title">AI analizuje</h3>
+                        <p class="timeline-description">
+                            Nasza sztuczna inteligencja automatycznie rozpoznaje produkty, ceny i kategoryzuje zakupy.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon purple">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="timeline-title">Zarządzaj</h3>
+                        <p class="timeline-description">
+                            Przeglądaj historię, analizuj trendy, kontroluj budżet i oszczędzaj pieniądze.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Dlaczego Paragony?</h2>
+                <p class="section-subtitle">Korzyści, które docenisz od pierwszego dnia</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="benefit-title">Oszczędzaj czas</h3>
+                    <p class="benefit-description">
+                        Automatyzacja zastępuje żmudne ręczne wprowadzanie danych. AI robi to za Ciebie w sekundach.
+                    </p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Skanowanie w 5 sekund</li>
+                        <li><i class="fas fa-check"></i> Automatyczna kategoryzacja</li>
+                        <li><i class="fas fa-check"></i> Zero ręcznego wprowadzania</li>
+                    </ul>
+                    <div class="benefit-stat">
+                        <div class="benefit-stat-value">95%</div>
+                        <div class="benefit-stat-label">Oszczędności czasu</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3 class="benefit-title">Kontroluj budżet</h3>
+                    <p class="benefit-description">
+                        Limity, powiadomienia i analizy pomagają trzymać wydatki pod kontrolą i unikać przekroczeń.
+                    </p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Limity per kategoria</li>
+                        <li><i class="fas fa-check"></i> Alerty o przekroczeniach</li>
+                        <li><i class="fas fa-check"></i> Prognozy wydatków</li>
+                    </ul>
+                    <div class="benefit-stat">
+                        <div class="benefit-stat-value">340 zł</div>
+                        <div class="benefit-stat-label">Średnie oszczędności/mies.</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="benefit-title">Analizuj smart</h3>
+                    <p class="benefit-description">
+                        Wykresy, trendy, historia cen i inteligentne sugestie - wszystko w jednym miejscu.
+                    </p>
+                    <ul class="benefit-list">
+                        <li><i class="fas fa-check"></i> Zaawansowane raporty</li>
+                        <li><i class="fas fa-check"></i> Historia cen produktów</li>
+                        <li><i class="fas fa-check"></i> Sugestie AI</li>
+                    </ul>
+                    <div class="benefit-stat">
+                        <div class="benefit-stat-value">99%</div>
+                        <div class="benefit-stat-label">Dokładność AI</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+            <div class="testimonials-section reveal">
+                <h3 class="testimonials-title">Co mówią użytkownicy</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Wreszcie aplikacja, która rzeczywiście oszczędza mi czas! Skanowanie jest błyskawiczne i niemal bezbłędne."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">AK</div>
+                            <div>
+                                <div class="testimonial-name">Anna Kowalska</div>
+                                <div class="testimonial-role">Warszawa</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Dzięki limitom budżetowym zaoszczędziłem w tym miesiącu ponad 500 zł. Polecam wszystkim!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MN</div>
+                            <div>
+                                <div class="testimonial-name">Marek Nowak</div>
+                                <div class="testimonial-role">Kraków</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Asystent AI jest genialny! Pomaga mi planować zakupy i daje świetne sugestie przepisów."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">KW</div>
+                            <div>
+                                <div class="testimonial-name">Katarzyna Wiśniewska</div>
+                                <div class="testimonial-role">Poznań</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Wybierz plan dla siebie</h2>
+                <p class="section-subtitle">Zacznij za darmo, przejdź na Premium w każdej chwili</p>
+            </div>
+            
+            <!-- Savings Calculator -->
+            <div class="savings-calculator reveal">
+                <div class="calculator-header">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Kalkulator oszczędności</h3>
+                    <p>Sprawdź ile możesz zaoszczędzić z Paragony</p>
+                </div>
+                <div class="calculator-body">
+                    <div class="calculator-input-group">
+                        <label>Miesięczne wydatki na zakupy:</label>
+                        <div class="calculator-slider-container">
+                            <input type="range" id="spending-slider" min="500" max="5000" value="2000" step="100">
+                            <div class="calculator-value"><span id="spending-value">2000</span> zł</div>
+                        </div>
+                    </div>
+                    <div class="calculator-results">
+                        <div class="calculator-result-item">
+                            <i class="fas fa-piggy-bank"></i>
+                            <div>
+                                <div class="result-label">Potencjalne oszczędności</div>
+                                <div class="result-value"><span id="savings-month">280</span> zł / miesiąc</div>
+                            </div>
+                        </div>
+                        <div class="calculator-result-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <div class="result-label">Rocznie zaoszczędzisz</div>
+                                <div class="result-value"><span id="savings-year">3,360</span> zł</div>
+                            </div>
+                        </div>
+                        <div class="calculator-result-item">
+                            <i class="fas fa-percentage"></i>
+                            <div>
+                                <div class="result-label">Procent oszczędności</div>
+                                <div class="result-value">14%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan">Darmowy</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">0</span>
+                            <span class="price-currency">zł</span>
+                            <span class="price-period">/miesiąc</span>
+                        </div>
+                        <p class="pricing-description">Idealny na start</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Do 50 paragonów/miesiąc</li>
+                        <li><i class="fas fa-check"></i> Podstawowe skanowanie AI</li>
+                        <li><i class="fas fa-check"></i> Dashboard z wykresami</li>
+                        <li><i class="fas fa-check"></i> Limity budżetowe (3)</li>
+                        <li><i class="fas fa-check"></i> Historia 3 miesięcy</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Historia cen</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Sugestie dań</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Eksport raportów</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Asystent AI (Premium)</li>
+                    </ul>
+                    <a href="index.html#register" class="btn btn-outline btn-block">
+                        Załóż konto za darmo
+                    </a>
+                </div>
+                
+                <div class="pricing-card featured reveal">
+                    <div class="pricing-badge">
+                        <i class="fas fa-star"></i> Najpopularniejszy
+                    </div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-plan">Premium</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">19</span>
+                            <span class="price-currency">zł</span>
+                            <span class="price-period">/miesiąc</span>
+                        </div>
+                        <p class="pricing-description">Pełen potencjał aplikacji</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> <strong>Nielimitowane</strong> paragony</li>
+                        <li><i class="fas fa-check"></i> Zaawansowane skanowanie AI</li>
+                        <li><i class="fas fa-check"></i> Wszystkie wykresy i raporty</li>
+                        <li><i class="fas fa-check"></i> <strong>Nielimitowane</strong> limity</li>
+                        <li><i class="fas fa-check"></i> <strong>Pełna</strong> historia</li>
+                        <li><i class="fas fa-check"></i> Historia cen produktów</li>
+                        <li><i class="fas fa-check"></i> Sugestie dań od AI</li>
+                        <li><i class="fas fa-check"></i> Eksport PDF/Excel</li>
+                        <li><i class="fas fa-check"></i> <strong>Asystent AI bez limitów</strong></li>
+                        <li><i class="fas fa-check"></i> Wsparcie priorytetowe</li>
+                    </ul>
+                    <a href="index.html#register" class="btn btn-primary btn-block">
+                        Wypróbuj Premium (14 dni za darmo)
+                    </a>
+                    <p class="pricing-note">Anuluj w każdej chwili, bez zobowiązań</p>
+                </div>
+            </div>
+            
+            <!-- Pricing Features Comparison -->
+            <div class="pricing-comparison reveal">
+                <button class="btn btn-secondary" id="toggle-comparison">
+                    <i class="fas fa-table"></i> Porównaj wszystkie funkcje
+                </button>
+                <div class="comparison-table hidden" id="comparison-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Funkcja</th>
+                                <th>Darmowy</th>
+                                <th>Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Liczba paragonów/mies.</td>
+                                <td>50</td>
+                                <td>Nielimitowane</td>
+                            </tr>
+                            <tr>
+                                <td>Dokładność AI</td>
+                                <td>95%</td>
+                                <td>99%</td>
+                            </tr>
+                            <tr>
+                                <td>Limity budżetowe</td>
+                                <td>3</td>
+                                <td>Nielimitowane</td>
+                            </tr>
+                            <tr>
+                                <td>Historia</td>
+                                <td>3 miesiące</td>
+                                <td>Pełna</td>
+                            </tr>
+                            <tr>
+                                <td>Eksport raportów</td>
+                                <td>-</td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Asystent AI</td>
+                                <td>Ograniczony</td>
+                                <td>Pełny dostęp</td>
+                            </tr>
+                            <tr>
+                                <td>Wsparcie</td>
+                                <td>Email (48h)</td>
+                                <td>Priorytetowe</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">Najczęściej zadawane pytania</h2>
+                <p class="section-subtitle">Znajdź odpowiedzi na popularne pytania</p>
+            </div>
+            
+            <!-- FAQ Search -->
+            <div class="faq-search reveal">
+                <input 
+                    type="text" 
+                    class="faq-search-input" 
+                    id="faq-search-input"
+                    placeholder="Wyszukaj pytanie..."
+                    autocomplete="off">
+            </div>
+            
+            <!-- FAQ Categories -->
+            <div class="faq-categories reveal">
+                <button class="faq-category-btn active" data-category="all">
+                    <i class="fas fa-th"></i> Wszystkie
+                </button>
+                <button class="faq-category-btn" data-category="scanning">
+                    <i class="fas fa-camera"></i> Skanowanie
+                </button>
+                <button class="faq-category-btn" data-category="security">
+                    <i class="fas fa-shield-alt"></i> Bezpieczeństwo
+                </button>
+                <button class="faq-category-btn" data-category="features">
+                    <i class="fas fa-star"></i> Funkcje
+                </button>
+                <button class="faq-category-btn" data-category="billing">
+                    <i class="fas fa-credit-card"></i> Płatności
+                </button>
+                <button class="faq-category-btn" data-category="technical">
+                    <i class="fas fa-cog"></i> Techniczne
+                </button>
+            </div>
+            
+            <div class="faq-container" id="faq-container">
+                <div class="faq-item-enhanced reveal" data-category="scanning">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <span>Jak działa skanowanie paragonów?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Wystarczy zrobić zdjęcie paragonu lub przesłać gotowy plik. Nasza technologia OCR (Optical Character Recognition) 
+                            i AI automatycznie rozpoznaje tekst, identyfikuje produkty, ceny, datę zakupu, nazwę sklepu i kategoryzuje wszystko. 
+                            Cały proces trwa około 5-10 sekund. System wykorzystuje zaawansowane modele uczenia maszynowego, które są regularnie 
+                            aktualizowane, aby poprawić dokładność rozpoznawania.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="security">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <span>Czy moje dane są bezpieczne?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Absolutnie! Bezpieczeństwo jest naszym priorytetem. Wszystkie dane są szyfrowane w tranzycie (SSL/TLS) i w spoczynku 
+                            (AES-256). Stosujemy najlepsze praktyki bezpieczeństwa, regularne audyty penetracyjne i automatyczne backupy. 
+                            Twoje paragony i dane finansowe są przechowywane na serwerach w UE zgodnie z RODO. Nigdy nie udostępniamy danych 
+                            osobom trzecim bez Twojej zgody. Dodatkowo oferujemy uwierzytelnianie dwuskładnikowe (2FA) dla zwiększenia bezpieczeństwa konta.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="technical">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <span>Jakie formaty obrazów są wspierane?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Wspieramy najpopularniejsze formaty: JPG, JPEG, PNG, WEBP, HEIC (iOS) oraz PDF. Maksymalny rozmiar pliku to 10 MB 
+                            na plan darmowy i 25 MB na Premium. Dla najlepszych rezultatów rekomendujemy zdjęcia o dobrej jakości (min. 1080p), 
+                            przy równym oświetleniu naturalnym lub sztucznym, z paragonem widocznym w całości bez zagięć. Unikaj mocnego backlight 
+                            i cieni. Aplikacja automatycznie koryguje kontrast i ostrość podczas przetwarzania.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="features">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <span>Czy mogę eksportować dane?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Tak! Użytkownicy Premium mogą eksportować raporty do formatów PDF, Excel (XLSX) i CSV. Możesz wybrać zakres dat, 
+                            konkretne kategorie wydatków i typ raportu (podsumowanie, szczegółowy, wykres). Export zawiera wszystkie dane: 
+                            produkty, ceny, sklepy, daty, kategorie oraz wykresy wizualizacyjne. Dodatkowo możesz ustawić automatyczne 
+                            wysyłanie raportów miesięcznych na email lub zapisywać do Google Drive / Dropbox.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="scanning">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span>Jak dokładne jest rozpoznawanie AI?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Nasz model AI osiąga dokładność rozpoznawania na poziomie ~99% dla czytelnych, standardowych paragonów z popularnych 
+                            sieci handlowych. Dla paragonów gorszej jakości, odręcznych lub nietypowych formatów dokładność wynosi ~85-90%. 
+                            Po każdym skanowaniu możesz zweryfikować i edytować dane ręcznie - system uczy się z Twoich poprawek dzięki mechanizmom 
+                            uczenia maszynowego. Z każdym tygodniem dokładność rośnie, ponieważ trenujemy model na nowych danych. Obecnie rozpoznajemy 
+                            paragony z ponad 500 różnych sieci handlowych w Polsce.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="billing">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <span>Czy mogę anulować Premium w każdej chwili?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Tak, możesz anulować subskrypcję Premium w dowolnym momencie z poziomu ustawień konta (Profil → Subskrypcja → Anuluj). 
+                            Nie ma żadnych ukrytych opłat, zobowiązań ani kar za wcześniejszą rezygnację. Po anulacji zachowasz pełny dostęp 
+                            do funkcji Premium do końca opłaconego okresu rozliczeniowego. Wszystkie Twoje dane (paragony, raporty, limity) 
+                            pozostaną w systemie - po anulacji przejdziesz na plan darmowy z ograniczeniami. Możesz w każdej chwili ponownie 
+                            aktywować Premium.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="technical">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Czy aplikacja działa na urządzeniach mobilnych?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Tak! Nasza aplikacja jest w pełni responsywna i działa świetnie na smartfonach (iOS i Android) oraz tabletach. 
+                            Możesz skanować paragony bezpośrednio z aparatu telefonu, przeglądać raporty, zarządzać budżetem i otrzymywać 
+                            powiadomienia push o przekroczeniu limitów. Interfejs jest zoptymalizowany pod touch - duże przyciski, intuicyjna 
+                            nawigacja dolna. Aplikacja działa online (wymaga połączenia internetowego do skanowania), ale podstawowe funkcje 
+                            jak przeglądanie historii działają offline. Pracujemy nad dedykowaną aplikacją natywną (iOS/Android) - beta w Q1 2026.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="features">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <span>Jakie kategorie wydatków są dostępne?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            System automatycznie kategoryzuje produkty do 15+ głównych kategorii: Żywność, Napoje, Chemia domowa, Kosmetyki, 
+                            Leki, Elektronika, Odzież, Sport, Dom i ogród, Paliwo, Restauracje, Rozrywka i inne. Każda kategoria ma podkategorie 
+                            (np. Żywność → Owoce, Warzywa, Mięso, Pieczywo). Możesz tworzyć własne niestandardowe kategorie i ręcznie przypisywać 
+                            produkty. AI uczy się Twoich preferencji kategoryzacji i z czasem automatycznie stosuje Twoje reguły. W ustawieniach 
+                            możesz scalać, ukrywać lub zmieniać nazwy kategorii według potrzeb.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="features">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <span>Jak działają limity budżetowe?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Limity pozwalają kontrolować wydatki w wybranych kategoriach. Ustawiasz miesięczny budżet (np. 500 zł na żywność) 
+                            i system automatycznie śledzi Twoje zakupy w tej kategorii. Gdy zbliżasz się do limitu (80%), otrzymujesz ostrzeżenie. 
+                            Po przekroczeniu limitu karta kategorii zmienia kolor na czerwony i dostajesz powiadomienie. Plan darmowy pozwala 
+                            na 3 limity, Premium - nielimitowane. Możesz ustawiać limity tygodniowe, miesięczne, kwartalne lub roczne. 
+                            System pokazuje prognozy - czy dotrzymasz budżetu na podstawie dotychczasowych wydatków.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="billing">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <span>Jakie metody płatności są akceptowane?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Akceptujemy karty kredytowe i debetowe (Visa, Mastercard, American Express), płatności BLIK, przelewy bankowe, 
+                            PayPal, Apple Pay i Google Pay. Wszystkie transakcje są obsługiwane przez Stripe - lidera w bezpiecznych płatnościach 
+                            online. Nie przechowujemy danych karty w naszym systemie. Rozliczenie odbywa się automatycznie co miesiąc/rok 
+                            (w zależności od planu). Otrzymujesz fakturę VAT mailem po każdej płatności. Można zmienić metodę płatności w każdej 
+                            chwili w ustawieniach. Oferujemy 14-dniowy okres testowy Premium bez podawania karty.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item-enhanced reveal" data-category="technical">
+                    <button class="faq-question-enhanced">
+                        <div class="faq-question-content">
+                            <div class="faq-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <span>Co zrobić jeśli AI źle rozpoznało paragon?</span>
+                        </div>
+                        <i class="fas fa-chevron-down faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-enhanced">
+                        <p>
+                            Nie martw się! Po każdym skanowaniu masz możliwość zweryfikowania danych. Jeśli zauważysz błędy, kliknij 
+                            "Edytuj paragon" i popraw nazwy produktów, ceny, kategorie lub datę. Możesz dodać brakujące produkty lub usunąć 
+                            nieprawidłowe pozycje. Twoje poprawki pomagają systemowi się uczyć - następnym razem AI będzie dokładniejsze 
+                            dla podobnych paragonów. Jeśli paragon w ogóle nie został rozpoznany, spróbuj: lepszego oświetlenia, rozłożenia 
+                            paragonu na płasko, wyższej rozdzielczości zdjęcia. Możesz też skontaktować się z supportem - pomożemy ręcznie 
+                            przetworzyć trudne przypadki.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final Section -->
+    <section class="cta-final" id="cta-final">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title">Gotowy na zmianę?</h2>
+                <p class="cta-subtitle">
+                    Dołącz do tysięcy użytkowników, którzy już zarządzają swoimi wydatkami inteligentnie
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#register" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i> Zacznij za darmo
+                    </a>
+                    <a href="#features" class="btn btn-outline-white btn-large">
+                        <i class="fas fa-info-circle"></i> Dowiedz się więcej
+                    </a>
+                </div>
+                <p class="cta-note">
+                    <i class="fas fa-shield-alt"></i> Bez karty kredytowej · Bez zobowiązań · Anuluj w każdej chwili
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column brand-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-receipt"></i>
+                        <span>Paragony</span>
+                    </div>
+                    <p class="footer-description">
+                        Inteligentne zarządzanie finansami osobistymi. 
+                        Skanuj, analizuj i oszczędzaj z mocą sztucznej inteligencji.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Produkt</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features" class="link-hover">Funkcje</a></li>
+                        <li><a href="#pricing" class="link-hover">Cennik</a></li>
+                        <li><a href="#faq" class="link-hover">FAQ</a></li>
+                        <li><a href="#" class="link-hover">Roadmap</a></li>
+                        <li><a href="#" class="link-hover">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4 class="footer-title">Firma</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="link-hover">O nas</a></li>
+                        <li><a href="#" class="link-hover">Blog</a></li>
+                        <li><a href="#" class="link-hover">Kariera</a></li>
+                        <li><a href="#" class="link-hover">Kontakt</a></li>
+                        <li><a href="#" class="link-hover">Media Kit</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column newsletter-column">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="newsletter-desc">Bądź na bieżąco z nowościami i poradami finansowymi.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Twój adres email" required>
+                            <button type="submit" aria-label="Zapisz się">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="form-status"></div>
+                    </form>
+                    <div class="footer-badges">
+                        <span class="badge"><i class="fas fa-shield-alt"></i> SSL Secure</span>
+                        <span class="badge"><i class="fas fa-check-circle"></i> RODO</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#" class="link-hover">Regulamin</a>
+                    <a href="#" class="link-hover">Polityka prywatności</a>
+                    <a href="#" class="link-hover">Cookies</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="current-year">2025</span> Paragony. Wszystkie prawa zastrzeżone.</p>
+                    <p class="creators">Creators - Łukasz Łapiak & Filip Czerwiński</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Demo Dashboard Modal -->
+    <div class="demo-modal" id="demo-modal">
+        <div class="demo-modal-content">
+            <div class="demo-dashboard-layout">
+                <!-- Sidebar -->
+                <div class="demo-sidebar">
+                    <div class="demo-logo">
+                        <i class="fas fa-receipt"></i>
+                        <span>Paragony</span>
+                    </div>
+                    <div class="demo-nav">
+                        <div class="demo-nav-item active">
+                            <i class="fas fa-home"></i>
+                            <span>Pulpit</span>
+                        </div>
+                        <div class="demo-nav-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Analizy</span>
+                        </div>
+                        <div class="demo-nav-item">
+                            <i class="fas fa-wallet"></i>
+                            <span>Budżet</span>
+                        </div>
+                        <div class="demo-nav-item">
+                            <i class="fas fa-history"></i>
+                            <span>Historia</span>
+                        </div>
+                        <div class="demo-nav-item">
+                            <i class="fas fa-cog"></i>
+                            <span>Ustawienia</span>
+                        </div>
+                    </div>
+                    <div class="demo-user-profile">
+                        <div class="demo-avatar">JD</div>
+                        <div class="demo-user-info">
+                            <div class="name">Jan Demo</div>
+                            <div class="role">Premium</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content -->
+                <div class="demo-main">
+                    <div class="demo-topbar">
+                        <h2 class="demo-page-title">Przegląd finansów</h2>
+                        <div class="demo-actions">
+                            <button class="demo-action-btn"><i class="fas fa-bell"></i></button>
+                            <button class="demo-modal-close" id="demo-modal-close">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="demo-content-scroll">
+                        <!-- Stats Row -->
+                        <div class="demo-stats-grid">
+                            <div class="demo-stat-card primary">
+                                <div class="stat-icon-wrapper">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">Paragony (Msc)</span>
+                                    <h3 class="stat-value" data-count="42">0</h3>
+                                </div>
+                                <div class="stat-trend positive">
+                                    <i class="fas fa-arrow-up"></i> 12%
+                                </div>
+                            </div>
+                            
+                            <div class="demo-stat-card success">
+                                <div class="stat-icon-wrapper">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">Wydatki (Msc)</span>
+                                    <h3 class="stat-value" data-count="2450" data-currency="zł">0 zł</h3>
+                                </div>
+                                <div class="stat-trend negative">
+                                    <i class="fas fa-arrow-down"></i> 5%
+                                </div>
+                            </div>
+                            
+                            <div class="demo-stat-card warning">
+                                <div class="stat-icon-wrapper">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">Budżet</span>
+                                    <h3 class="stat-value">82%</h3>
+                                </div>
+                                <div class="stat-progress">
+                                    <div class="progress-bar" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-stat-card info">
+                                <div class="stat-icon-wrapper">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <span class="stat-label">Produkty</span>
+                                    <h3 class="stat-value" data-count="156">0</h3>
+                                </div>
+                                <div class="stat-trend positive">
+                                    <i class="fas fa-plus"></i> 24
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Charts & Recent -->
+                        <div class="demo-dashboard-grid">
+                            <!-- Main Chart -->
+                            <div class="demo-card chart-card">
+                                <div class="card-header">
+                                    <h3>Wydatki w czasie</h3>
+                                    <div class="card-actions">
+                                        <button class="chart-filter active">7 dni</button>
+                                        <button class="chart-filter">30 dni</button>
+                                    </div>
+                                </div>
+                                <div class="chart-area">
+                                    <div class="demo-bar-chart-container">
+                                        <!-- Bars will be animated via JS/CSS -->
+                                        <div class="chart-bar-group" data-day="Pon" data-amount="120">
+                                            <div class="chart-bar" style="--height: 40%"></div>
+                                            <div class="chart-tooltip">120 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Wt" data-amount="85">
+                                            <div class="chart-bar" style="--height: 30%"></div>
+                                            <div class="chart-tooltip">85 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Śr" data-amount="210">
+                                            <div class="chart-bar" style="--height: 70%"></div>
+                                            <div class="chart-tooltip">210 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Czw" data-amount="160">
+                                            <div class="chart-bar" style="--height: 55%"></div>
+                                            <div class="chart-tooltip">160 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Pt" data-amount="320">
+                                            <div class="chart-bar" style="--height: 90%"></div>
+                                            <div class="chart-tooltip">320 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Sob" data-amount="280">
+                                            <div class="chart-bar" style="--height: 80%"></div>
+                                            <div class="chart-tooltip">280 zł</div>
+                                        </div>
+                                        <div class="chart-bar-group" data-day="Ndz" data-amount="90">
+                                            <div class="chart-bar" style="--height: 35%"></div>
+                                            <div class="chart-tooltip">90 zł</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Categories Donut (Simulated with CSS) -->
+                            <div class="demo-card category-card">
+                                <div class="card-header">
+                                    <h3>Kategorie</h3>
+                                </div>
+                                <div class="donut-chart-wrapper">
+                                    <div class="donut-chart">
+                                        <div class="donut-segment segment-1"></div>
+                                        <div class="donut-segment segment-2"></div>
+                                        <div class="donut-segment segment-3"></div>
+                                        <div class="donut-center">
+                                            <span class="total-spent">2450 zł</span>
+                                            <span class="total-label">Suma</span>
+                                        </div>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <div class="legend-item">
+                                            <span class="dot color-1"></span>
+                                            <span>Żywność</span>
+                                            <span class="percent">45%</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="dot color-2"></span>
+                                            <span>Paliwo</span>
+                                            <span class="percent">30%</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <span class="dot color-3"></span>
+                                            <span>Inne</span>
+                                            <span class="percent">25%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Recent Transactions -->
+                            <div class="demo-card transactions-card">
+                                <div class="card-header">
+                                    <h3>Ostatnie paragony</h3>
+                                    <button class="view-all-btn">Zobacz wszystkie</button>
+                                </div>
+                                <div class="transactions-list">
+                                    <div class="transaction-item">
+                                        <div class="trans-icon store-lidl">L</div>
+                                        <div class="trans-details">
+                                            <div class="trans-store">Lidl</div>
+                                            <div class="trans-date">Dziś, 14:30</div>
+                                        </div>
+                                        <div class="trans-amount">-124.50 zł</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="trans-icon store-orlen">O</div>
+                                        <div class="trans-details">
+                                            <div class="trans-store">Orlen</div>
+                                            <div class="trans-date">Wczoraj, 18:15</div>
+                                        </div>
+                                        <div class="trans-amount">-250.00 zł</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="trans-icon store-rossmann">R</div>
+                                        <div class="trans-details">
+                                            <div class="trans-store">Rossmann</div>
+                                            <div class="trans-date">10.11.2025</div>
+                                        </div>
+                                        <div class="trans-amount">-45.90 zł</div>
+                                    </div>
+                                    <div class="transaction-item">
+                                        <div class="trans-icon store-biedronka">B</div>
+                                        <div class="trans-details">
+                                            <div class="trans-store">Biedronka</div>
+                                            <div class="trans-date">09.11.2025</div>
+                                        </div>
+                                        <div class="trans-amount">-89.20 zł</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/main-landing.js"></script>
+</body>
+</html>

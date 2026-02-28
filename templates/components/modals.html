@@ -1,0 +1,65 @@
+<div id="recipe-modal" class="modal hidden recipe-modal">
+        <div class="modal-content large recipe-modal-card">
+            <div class="modal-header recipe-modal-header">
+                <h2><i class="fas fa-book-open"></i> <span id="recipe-title">Przepis</span></h2>
+                <button class="close-modal" type="button" aria-label="Zamknij okno">&times;</button>
+            </div>
+            <div class="modal-body recipe-modal-body">
+                <div id="recipe-content" class="recipe-content"></div>
+            </div>
+        </div>
+    </div>
+
+<div id="product-info-modal" class="modal hidden">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h2><i class="fas fa-info-circle"></i> <span id="product-info-title">Informacje o produkcie</span></h2>
+                <button class="close-modal" type="button" aria-label="Zamknij okno">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="product-info-content" class="product-info-content"></div>
+            </div>
+        </div>
+    </div>
+
+<div id="confirm-logout-modal" class="modal hidden">
+        <div class="modal-content modal-confirm">
+            <div class="modal-header">
+                <h2><i class="fas fa-sign-out-alt"></i> Wylogowanie</h2>
+                <button class="close-modal" type="button" aria-label="Zamknij okno">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Czy na pewno chcesz się wylogować?</strong></p>
+                <p>Zostaniesz przekierowany na stronę główną.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal">
+                        <i class="fas fa-times"></i> Anuluj
+                    </button>
+                    <button type="button" class="btn btn-danger" id="confirm-logout-action">
+                        <i class="fas fa-sign-out-alt"></i> Wyloguj się
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="confirm-clear-history-modal" class="modal hidden">
+        <div class="modal-content modal-confirm">
+            <div class="modal-header">
+                <h2><i class="fas fa-broom"></i> Wyczyść historię</h2>
+                <button class="close-modal" type="button" aria-label="Zamknij okno">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Czy na pewno chcesz wyczyścić całą historię rozmowy?</strong></p>
+                <p>Cała historia zostanie bezpowrotnie usunięta. Tej operacji nie można cofnąć.</p>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal">
+                        <i class="fas fa-times"></i> Anuluj
+                    </button>
+                    <button type="button" class="btn btn-danger" id="confirm-clear-history-action">
+                        <i class="fas fa-broom"></i> Wyczyść
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,74 @@
+<nav class="navbar">
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <div class="navbar-brand">
+                <i class="fas fa-receipt"></i>
+                <span>Paragony</span>
+            </div>
+
+            <div class="navbar-search">
+                <div class="form-search" role="search">
+                    <i class="form-search-icon fas fa-search" aria-hidden="true"></i>
+                    <input 
+                        type="text" 
+                        class="form-input form-search-input" 
+                        placeholder="Szukaj... (Ctrl+K)" 
+                        autocomplete="off"
+                        aria-label="Wyszukaj produkty"
+                        aria-describedby="search-hint"
+                        aria-controls="navbar-search-dropdown"
+                        aria-expanded="false">
+                    <button class="form-search-clear hidden" id="navbar-search-clear" type="button" aria-label="Wyczyść wyszukiwanie">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="search-dropdown hidden" id="navbar-search-dropdown" role="menu" aria-label="Wyniki wyszukiwania">
+                    <div class="search-dropdown-section" id="recent-searches-section">
+                        <div class="search-dropdown-header">
+                            <span><i class="fas fa-history" aria-hidden="true"></i> Ostatnie wyszukiwania</span>
+                            <button class="search-dropdown-clear-btn" id="clear-search-history" type="button" aria-label="Wyczyść historię wyszukiwania">Wyczyść</button>
+                        </div>
+                        <div class="search-dropdown-items" id="recent-searches-list" role="list"></div>
+                    </div>
+                    <div class="search-dropdown-section" id="quick-results-section">
+                        <div class="search-dropdown-header">
+                            <span><i class="fas fa-search" aria-hidden="true"></i> Wyniki</span>
+                        </div>
+                        <div class="search-dropdown-items" id="quick-results-list" role="list"></div>
+                    </div>
+                    <div class="search-dropdown-footer">
+                        <button class="search-dropdown-view-all" id="view-all-results" type="button" aria-label="Zobacz wszystkie wyniki wyszukiwania">
+                            Zobacz wszystkie wyniki <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-menu">
+                <button class="navbar-action" id="notifications-btn" type="button">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge" id="notifications-count">0</span>
+                </button>
+
+                <div class="navbar-user-wrapper" id="user-menu">
+                    <button class="navbar-user" id="user-menu-btn" type="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="User" class="navbar-avatar">
+                        <div class="navbar-user-info">
+                            <div class="navbar-user-name" id="user-name">Użytkownik</div>
+                            <div class="navbar-user-role">Konto podstawowe</div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="user-menu-dropdown hidden" id="user-menu-dropdown" role="menu" aria-labelledby="user-menu-btn">
+                        <button type="button" class="user-menu-item" data-view="profile" id="user-menu-profile" role="menuitem">
+                            <i class="fas fa-user-circle"></i> Profil
+                        </button>
+                        <button type="button" class="user-menu-item user-menu-item-danger" id="logout-btn" role="menuitem">
+                            <i class="fas fa-sign-out-alt"></i> Wyloguj
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>

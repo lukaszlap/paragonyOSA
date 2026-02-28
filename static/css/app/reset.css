@@ -1,0 +1,224 @@
+/* Modern CSS Reset */
+/* Based on: https://piccalil.li/blog/a-modern-css-reset/ */
+/* Enhanced for Paragony App */
+
+/* ===== Box Sizing ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ===== Remove Default Margins & Paddings ===== */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Root & Body ===== */
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    overflow-x: hidden;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    color: var(--gray-800);
+    background: var(--app-bg);
+    overflow-x: hidden;
+    max-width: 100vw;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Remove List Styles ===== */
+ul,
+ol {
+    list-style: none;
+}
+
+/* ===== Links ===== */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* ===== Images & Media ===== */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Forms ===== */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Remove spinner from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* ===== Tables ===== */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ===== Headings ===== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--gray-900);
+}
+
+/* ===== Paragraphs ===== */
+p {
+    line-height: var(--leading-relaxed);
+}
+
+/* ===== Better Focus Styles ===== */
+*:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ===== Remove animations for users who prefer reduced motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== Selection ===== */
+::selection {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+::-moz-selection {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* ===== Scrollbar Styling (Webkit) ===== */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+/* ===== Hidden Class ===== */
+.hidden {
+    display: none !important;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* ===== Clearfix ===== */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ===== Prevent text overflow ===== */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== Smooth transitions for all interactive elements ===== */
+a,
+button,
+input,
+select,
+textarea {
+    transition: var(--transition-fast);
+}

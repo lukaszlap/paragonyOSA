@@ -1,0 +1,39 @@
+<div id="shopping-list-modal" class="modal hidden">
+                    <div class="modal-content large">
+                        <div class="modal-header">
+                            <h2>Utwórz Listę Zakupów</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body two-columns">
+                            <div class="products-selection">
+                                <h3>Dostępne produkty</h3>
+                                <input type="text" id="filter-products" placeholder="Filtruj produkty...">
+                                <div id="available-products" class="products-list"></div>
+                            </div>
+                            <div class="selected-products">
+                                <h3>Wybrane produkty</h3>
+                                <div id="selected-products-list" class="products-list"></div>
+                                <button id="save-shopping-list-btn" class="btn btn-success">
+                                    <i class="fas fa-save"></i> Zapisz listę
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<div id="shopping-list-summary-modal" class="modal hidden">
+                    <div class="modal-content large">
+                        <div class="modal-header">
+                            <h2 id="shopping-list-summary-title">Podsumowanie listy zakupów</h2>
+                            <button class="close-modal">&times;</button>
+                        </div>
+                        <div class="modal-body summary-body">
+                            <div id="shopping-list-summary-container" class="shopping-summary"></div>
+                            <div class="modal-footer">
+                                <button id="close-summary-btn" class="btn btn-primary">
+                                    <i class="fas fa-check"></i> Zamknij
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>

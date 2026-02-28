@@ -1,0 +1,74 @@
+<div id="assistant-view" class="content-view">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">
+                            <i class="fas fa-robot"></i> Wirtualny Asystent AI
+                        </h1>
+                        <p class="page-subtitle">Twój inteligentny asystent finansowy</p>
+                    </div>
+                    <div class="page-actions">
+                        <div id="assistant-status" class="assistant-status assistant-status-online">
+                            <i class="fas fa-circle"></i> Online
+                        </div>
+                        <button id="assistant-clear-btn" class="btn btn-secondary" type="button">
+                            <i class="fas fa-broom"></i> Wyczyść historię
+                        </button>
+                    </div>
+                </div>
+
+                <div class="assistant-container">
+                    <!-- Chat Messages Area -->
+                    <div class="assistant-chat-wrapper">
+                        <div id="assistant-messages" class="assistant-messages">
+                            <!-- Messages will be inserted here by JavaScript -->
+                        </div>
+
+                        <!-- Typing Indicator -->
+                        <div id="assistant-typing" class="assistant-typing hidden">
+                            <div class="assistant-message assistant-message-assistant">
+                                <div class="assistant-message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="assistant-message-content">
+                                    <div class="typing-indicator">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Suggestions -->
+                    <div class="assistant-suggestions-wrapper">
+                        <div class="assistant-suggestions-title">
+                            <i class="fas fa-lightbulb"></i> Przykładowe pytania:
+                        </div>
+                        <div id="assistant-suggestions" class="assistant-suggestions">
+                            <!-- Suggestions will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="assistant-input-wrapper">
+                        <div class="assistant-input-container">
+                            <textarea 
+                                id="assistant-input" 
+                                class="assistant-input" 
+                                placeholder="Napisz wiadomość do asystenta..."
+                                rows="1"
+                                maxlength="1000"
+                            ></textarea>
+                            <button id="assistant-send-btn" class="assistant-send-btn" type="button" aria-label="Wyślij wiadomość">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="assistant-input-footer">
+                            <span class="assistant-input-hint">
+                                <i class="fas fa-info-circle"></i> Możesz zapytać o swoje wydatki, budżety, produkty i wiele więcej
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>

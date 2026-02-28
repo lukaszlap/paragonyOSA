@@ -1,0 +1,1659 @@
+/* Profile Styles */
+
+/* ===== PROFILE AVATAR ===== */
+.profile-avatar-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
+.profile-avatar-edit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--primary-color);
+    border: 3px solid var(--white);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-size: var(--text-sm);
+}
+
+.profile-avatar-edit:hover {
+    background: var(--primary-hover);
+    transform: scale(1.1);
+}
+
+/* ===== PROFILE STATS ===== */
+.profile-stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    background: var(--gray-50);
+    transition: var(--transition-base);
+}
+
+.profile-stat:hover {
+    background: var(--gray-100);
+    transform: translateX(4px);
+}
+
+.profile-stat:not(:last-child) {
+    margin-bottom: var(--spacing-3);
+}
+
+.profile-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: var(--radius-lg);
+    color: var(--white);
+    font-size: var(--text-xl);
+    flex-shrink: 0;
+}
+
+.profile-stat-info {
+    flex: 1;
+}
+
+.profile-stat-value {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--gray-900);
+}
+
+.profile-stat-label {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    margin-top: var(--spacing-1);
+}
+
+/* ===== TABS ===== */
+.tabs {
+    display: flex;
+    gap: var(--spacing-2);
+    border-bottom: 2px solid var(--gray-200);
+    margin-bottom: var(--spacing-6);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3) var(--spacing-6);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--gray-600);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: var(--transition-base);
+    margin-bottom: -2px;
+}
+
+.tab:hover {
+    color: var(--gray-900);
+    background: var(--gray-50);
+}
+
+.tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.tab i {
+    font-size: var(--text-base);
+}
+
+/* ===== TABS PILLS (Alternative Style) ===== */
+.tabs-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
+.tabs-pills .tab {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-full);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--white);
+    color: var(--gray-700);
+    font-size: var(--text-sm);
+}
+
+.tabs-pills .tab:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-light);
+}
+
+.tabs-pills .tab.active {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+/* ===== TAB CONTENT ===== */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== FORM ACTIONS ===== */
+.form-actions {
+    display: flex;
+    gap: var(--spacing-3);
+    justify-content: flex-end;
+    margin-top: var(--spacing-6);
+}
+
+/* ===== LAYOUT ADJUSTMENTS ===== */
+#profile-view .grid {
+    align-items: flex-start;
+    gap: var(--spacing-6);
+}
+
+#profile-view .col-span-1,
+#profile-view .col-span-2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+}
+
+/* ===== LOGS SECTION ===== */
+.logs-filters {
+    background: var(--gray-50);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+}
+
+.logs-filter-info {
+    display: inline-block;
+    margin-left: var(--spacing-3);
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    font-weight: var(--font-medium);
+}
+
+.logs-filters .form-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.logs-filters .form-label i {
+    color: var(--primary-color);
+    font-size: var(--text-sm);
+}
+
+.logs-table-container {
+    overflow-x: auto;
+    margin-top: var(--spacing-4);
+}
+
+.logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+}
+
+.logs-table thead {
+    background: var(--gray-100);
+}
+
+.logs-table th {
+    padding: var(--spacing-3) var(--spacing-4);
+    text-align: left;
+    font-weight: var(--font-semibold);
+    color: var(--gray-700);
+    border-bottom: 2px solid var(--gray-200);
+    font-size: var(--text-sm);
+}
+
+.logs-table td {
+    padding: var(--spacing-3) var(--spacing-4);
+    border-bottom: 1px solid var(--gray-200);
+    font-size: var(--text-sm);
+    color: var(--gray-900);
+}
+
+.log-timestamp {
+    color: var(--gray-600);
+    font-family: 'Courier New', monospace;
+    font-size: var(--text-xs);
+}
+
+.logs-table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.logs-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.log-action-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    background: var(--gray-200);
+    color: var(--gray-700);
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.log-action-badge:hover {
+    transform: scale(1.05);
+}
+
+.log-action-badge i {
+    font-size: 0.85em;
+}
+
+/* Autentykacja - niebieski (#3498db) */
+.log-action-badge.login,
+.log-action-badge.register {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.log-action-badge.logout {
+    background: rgba(149, 165, 166, 0.15);
+    color: #7f8c8d;
+    border: 1px solid rgba(149, 165, 166, 0.3);
+}
+
+/* Skanowanie - zielony (#2ecc71, #27ae60) */
+.log-action-badge.scan-receipt-start,
+.log-action-badge.add-receipt-start {
+    background: rgba(46, 204, 113, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.log-action-badge.scan-receipt-success,
+.log-action-badge.add-receipt-success,
+.log-action-badge.add-products-success {
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+/* Błędy - czerwony (#e74c3c) */
+.log-action-badge.scan-receipt-error,
+.log-action-badge.add-receipt-error,
+.log-action-badge.add-products-error {
+    background: rgba(231, 76, 60, 0.15);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+/* Pobieranie/Wyświetlanie - fioletowy (#9b59b6) */
+.log-action-badge.fetch-receipts-list,
+.log-action-badge.view-receipt-details,
+.log-action-badge.view-products-list,
+.log-action-badge.view-shopping-list,
+.log-action-badge.generate-report {
+    background: rgba(155, 89, 182, 0.15);
+    color: #8e44ad;
+    border: 1px solid rgba(155, 89, 182, 0.3);
+}
+
+/* Edycja/Aktualizacja - pomarańczowy (#f39c12) */
+.log-action-badge.update-receipt,
+.log-action-badge.update-product,
+.log-action-badge.update-limit,
+.log-action-badge.classify-products-start,
+.log-action-badge.password-change,
+.log-action-badge.update-profile {
+    background: rgba(243, 156, 18, 0.15);
+    color: #e67e22;
+    border: 1px solid rgba(243, 156, 18, 0.3);
+}
+
+/* Usuwanie - ciemny czerwony (#c0392b) */
+.log-action-badge.delete-receipt,
+.log-action-badge.delete-product,
+.log-action-badge.delete-limit,
+.log-action-badge.delete-shopping-list {
+    background: rgba(192, 57, 43, 0.15);
+    color: #c0392b;
+    border: 1px solid rgba(192, 57, 43, 0.3);
+}
+
+/* Tworzenie - niebieski (#3498db) */
+.log-action-badge.create-limit,
+.log-action-badge.create-shopping-list,
+.log-action-badge.set-limit {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+/* Backward compatibility - stare akcje */
+.log-action-badge.receipt-upload,
+.log-action-badge.scan-receipt,
+.log-action-badge.add-product {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.log-action-badge.limit-exceeded {
+    background: rgba(231, 76, 60, 0.15);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.log-action-badge.api-key-added {
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.log-status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.log-status-badge:hover {
+    transform: scale(1.05);
+}
+
+.log-status-badge.active {
+    background: rgba(39, 174, 96, 0.15);
+    color: #27ae60;
+    border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.log-status-badge.default {
+    background: rgba(149, 165, 166, 0.15);
+    color: #7f8c8d;
+    border: 1px solid rgba(149, 165, 166, 0.3);
+}
+
+.log-status-badge.premium {
+    background: rgba(241, 196, 15, 0.15);
+    color: #f39c12;
+    border: 1px solid rgba(241, 196, 15, 0.3);
+}
+
+.log-status-badge.admin {
+    background: rgba(155, 89, 182, 0.15);
+    color: #8e44ad;
+    border: 1px solid rgba(155, 89, 182, 0.3);
+}
+
+.log-status-badge.trial {
+    background: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.log-status-badge.inactive {
+    background: rgba(189, 195, 199, 0.15);
+    color: #95a5a6;
+    border: 1px solid rgba(189, 195, 199, 0.3);
+}
+
+.log-status-badge.suspended {
+    background: rgba(231, 76, 60, 0.15);
+    color: #c0392b;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.log-details {
+    color: var(--gray-600);
+    font-size: var(--text-xs);
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: help;
+}
+
+.log-details:hover {
+    color: var(--gray-900);
+}
+
+.logs-empty-state {
+    text-align: center;
+    padding: var(--spacing-8);
+    color: var(--gray-500);
+}
+
+.logs-empty-state i {
+    font-size: 48px;
+    margin-bottom: var(--spacing-4);
+    opacity: 0.5;
+}
+
+.logs-empty-state p {
+    font-size: var(--text-base);
+}
+
+.logs-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+}
+
+.logs-pagination-left,
+.logs-pagination-right {
+    flex: 0 0 auto;
+}
+
+.logs-pagination-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.logs-page-info {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    font-weight: var(--font-medium);
+}
+
+.logs-page-size-selector {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+.logs-page-size-selector label,
+.logs-page-size-selector span {
+    white-space: nowrap;
+}
+
+.logs-page-size-selector select {
+    width: auto;
+    padding: 4px 24px 4px 8px;
+    font-size: var(--text-sm);
+}
+
+/* Mobile Card View */
+.logs-mobile-container {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-3);
+}
+
+.log-mobile-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-4);
+    transition: var(--transition-base);
+}
+
+.log-mobile-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.log-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-3);
+    padding-bottom: var(--spacing-3);
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.log-mobile-date {
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+}
+
+.log-mobile-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.log-mobile-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+}
+
+.log-mobile-label {
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+    font-weight: var(--font-medium);
+    flex-shrink: 0;
+}
+
+.log-mobile-value {
+    font-size: var(--text-sm);
+    color: var(--gray-900);
+    text-align: right;
+    word-break: break-word;
+    max-width: 60%;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    #profile-view .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #profile-view .col-span-1,
+    #profile-view .col-span-2 {
+        grid-column: 1 / -1;
+    }
+
+    .tabs {
+        overflow-x: auto;
+        scrollbar-width: thin;
+    }
+    
+    .tab {
+        white-space: nowrap;
+        padding: var(--spacing-2) var(--spacing-4);
+        font-size: var(--text-sm);
+    }
+    
+    .profile-stat {
+        gap: var(--spacing-3);
+    }
+    
+    .profile-stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-lg);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    /* Hide desktop table on mobile */
+    .logs-table-container {
+        display: none !important;
+    }
+
+    /* Show mobile view */
+    .logs-mobile-container {
+        display: flex !important;
+    }
+
+    .logs-filters .grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-3);
+    }
+
+    .logs-filters .form-actions {
+        flex-direction: column;
+    }
+
+    .logs-filters .btn {
+        width: 100%;
+    }
+
+    .logs-filter-info {
+        text-align: center;
+        margin-left: 0;
+        margin-top: var(--spacing-2);
+        display: block;
+    }
+
+    .logs-pagination {
+        flex-direction: column;
+        gap: var(--spacing-3);
+    }
+
+    .logs-pagination-left,
+    .logs-pagination-right {
+        width: 100%;
+        flex: 0 0 auto;
+    }
+
+    .logs-pagination-center {
+        width: 100%;
+        order: -1; /* Move to top on mobile */
+    }
+
+    .logs-pagination .btn {
+        width: 100%;
+        font-size: var(--text-sm);
+        padding: var(--spacing-2) var(--spacing-4);
+    }
+
+    .logs-page-info {
+        font-size: var(--text-xs);
+        text-align: center;
+    }
+
+    .logs-page-size-selector {
+        justify-content: center;
+        font-size: var(--text-xs);
+        flex-wrap: wrap;
+    }
+
+    .logs-page-size-selector select {
+        padding: 4px 20px 4px 6px;
+        font-size: var(--text-xs);
+    }
+
+    /* Profile page header adjustments */
+    #profile-view .page-header {
+        padding: var(--spacing-4) 0;
+    }
+
+    #profile-view .page-title {
+        font-size: var(--text-2xl);
+    }
+
+    #profile-view .page-subtitle {
+        font-size: var(--text-sm);
+    }
+
+    /* Profile avatar adjustments */
+    .profile-avatar-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-avatar-edit {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+    }
+
+    /* Profile card text sizing */
+    #profile-view .card-body h2 {
+        font-size: var(--text-lg);
+    }
+
+    #profile-view .card-body p {
+        font-size: var(--text-sm);
+    }
+
+    #profile-view .card-header h3 {
+        font-size: var(--text-base);
+    }
+
+    /* Stats value sizing */
+    .profile-stat-value {
+        font-size: var(--text-lg);
+    }
+
+    .profile-stat-label {
+        font-size: var(--text-xs);
+    }
+
+    /* Tabs improvements - CRITICAL for mobile visibility */
+    .tabs {
+        gap: 0;
+        padding-bottom: 0;
+        -webkit-overflow-scrolling: touch;
+        border-bottom: 2px solid var(--gray-200);
+        margin-bottom: var(--spacing-4);
+        display: flex !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+    }
+    
+    .tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .tabs::-webkit-scrollbar-thumb {
+        background: var(--gray-300);
+        border-radius: var(--radius-full);
+    }
+
+    .tab {
+        flex-shrink: 0;
+        min-width: auto;
+        padding: var(--spacing-3) var(--spacing-4);
+        display: flex !important;
+        align-items: center;
+        gap: var(--spacing-2);
+        font-size: var(--text-sm);
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid transparent;
+        color: var(--gray-600);
+        font-weight: var(--font-medium);
+        cursor: pointer;
+        transition: var(--transition-base);
+        margin-bottom: -2px;
+        white-space: nowrap;
+    }
+
+    .tab:hover {
+        color: var(--gray-900);
+        background: var(--gray-50);
+    }
+
+    .tab.active {
+        color: var(--primary-color);
+        border-bottom-color: var(--primary-color);
+        background: var(--primary-light);
+    }
+
+    .tab i {
+        font-size: var(--text-sm);
+    }
+
+    /* Ensure tab content is visible */
+    .tab-content {
+        display: none !important;
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .tab-content.active {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+        animation: fadeIn 0.3s ease-in;
+    }
+
+    /* Grid spacing adjustments */
+    #profile-view .grid {
+        gap: var(--spacing-4);
+    }
+
+    #profile-view .col-span-1,
+    #profile-view .col-span-2 {
+        gap: var(--spacing-4);
+    }
+
+    #profile-view .card {
+        margin-bottom: 0;
+    }
+
+    #profile-view .card + .card {
+        margin-top: var(--spacing-4);
+    }
+
+    /* Form improvements */
+    #profile-view .form-group {
+        margin-bottom: var(--spacing-4);
+    }
+
+    #profile-view .form-label {
+        font-size: var(--text-sm);
+        margin-bottom: var(--spacing-2);
+    }
+
+    #profile-view .form-input,
+    #profile-view .form-select {
+        font-size: var(--text-base);
+        padding: var(--spacing-3);
+    }
+
+    #profile-view .form-hint {
+        font-size: var(--text-xs);
+    }
+
+    /* Form button group (API key section) */
+    #profile-view .form-button-group {
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+
+    #profile-view .form-button-group .form-input {
+        border-radius: var(--radius-lg);
+    }
+
+    #profile-view .form-button-group .btn {
+        width: 100%;
+        border-radius: var(--radius-lg);
+    }
+
+    .form-actions {
+        gap: var(--spacing-2);
+        margin-top: var(--spacing-4);
+    }
+
+    /* Form switches */
+    .form-switch {
+        padding: var(--spacing-3);
+    }
+
+    /* Badges */
+    #profile-view .badge {
+        font-size: var(--text-xs);
+        padding: 4px 12px;
+    }
+
+    /* Logs filters */
+    .logs-filters {
+        padding: var(--spacing-3);
+    }
+
+    .logs-filters .form-group {
+        margin-bottom: 0;
+    }
+
+    .logs-filters .form-label {
+        font-size: var(--text-xs);
+        margin-bottom: var(--spacing-2);
+    }
+
+    .logs-filters .form-label i {
+        font-size: 0.75rem;
+    }
+
+    .logs-filters .form-input,
+    .logs-filters .form-select {
+        font-size: var(--text-sm);
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    .logs-filters .form-actions {
+        margin-top: var(--spacing-3);
+        gap: var(--spacing-2);
+    }
+
+    .logs-filters .btn {
+        font-size: var(--text-sm);
+        padding: var(--spacing-2) var(--spacing-4);
+    }
+
+    .logs-filter-info {
+        font-size: var(--text-xs);
+    }
+
+    /* Mobile cards */
+    .log-mobile-card {
+        padding: var(--spacing-3);
+    }
+
+    .log-mobile-header {
+        margin-bottom: var(--spacing-2);
+        padding-bottom: var(--spacing-2);
+    }
+
+    .log-mobile-date {
+        font-size: 0.7rem;
+    }
+
+    .log-mobile-body {
+        gap: var(--spacing-2);
+    }
+
+    .log-mobile-row {
+        gap: var(--spacing-2);
+    }
+
+    .log-mobile-label {
+        font-size: 0.7rem;
+    }
+
+    .log-mobile-value {
+        font-size: var(--text-xs);
+    }
+
+    /* Logs pagination adjustments */
+    .logs-pagination {
+        padding: var(--spacing-3);
+    }
+
+    /* Empty state */
+    .logs-empty-state {
+        padding: var(--spacing-6);
+    }
+
+    .logs-empty-state i {
+        font-size: 36px;
+        margin-bottom: var(--spacing-3);
+    }
+
+    .logs-empty-state p {
+        font-size: var(--text-sm);
+    }
+
+    /* Tab content spacing and visibility */
+    .tab-content .card + .card {
+        margin-top: var(--spacing-4);
+    }
+
+    /* Ensure proper spacing for tab content */
+    #profile-view .tab-content {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    /* Right column adjustments for better mobile view */
+    #profile-view .col-span-2 {
+        width: 100%;
+        order: 2;
+    }
+
+    #profile-view .col-span-1 {
+        width: 100%;
+        order: 1;
+    }
+
+    /* Additional card body padding adjustments */
+    #profile-view .card-body {
+        padding: var(--spacing-4);
+    }
+
+    /* Ensure all tab panels are properly sized and visible */
+    #personal-tab,
+    #security-tab,
+    #settings-tab,
+    #logs-tab {
+        width: 100%;
+        overflow-x: hidden;
+        min-height: 300px;
+    }
+
+    /* Force visibility when active */
+    #personal-tab.active,
+    #security-tab.active,
+    #settings-tab.active,
+    #logs-tab.active {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+    }
+
+    /* Better button visibility in tabs */
+    #profile-view .card .btn {
+        font-size: var(--text-sm);
+        padding: var(--spacing-3) var(--spacing-4);
+    }
+
+    /* Upgrade button adjustments */
+    #profile-view .card-footer {
+        padding: var(--spacing-3);
+    }
+
+    #profile-view .card-footer .btn {
+        padding: var(--spacing-3);
+        font-size: var(--text-sm);
+        white-space: nowrap;
+    }
+
+    #profile-view .card-footer .btn i {
+        font-size: var(--text-sm);
+    }
+
+    /* Personal data form improvements */
+    #personal-data-form .form-group,
+    #change-password-form .form-group,
+    #api-key-form .form-group {
+        margin-bottom: var(--spacing-4);
+    }
+
+    /* Settings tab improvements */
+    #settings-tab .card {
+        margin-bottom: var(--spacing-4);
+    }
+
+    #settings-tab .card:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Logs tab - ensure visibility */
+    #logs-tab {
+        display: block;
+    }
+
+    #logs-tab.active {
+        display: block !important;
+    }
+
+    #logs-tab .card-body {
+        padding: var(--spacing-3);
+        overflow-x: hidden;
+    }
+
+    /* Grid columns in logs filters - make sure they stack properly */
+    .logs-filters .grid.grid-cols-2,
+    .logs-filters .grid.grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== EXTRA SMALL MOBILE DEVICES ===== */
+@media (max-width: 480px) {
+    /* Overall view adjustments */
+    #profile-view {
+        padding: 0 var(--spacing-2);
+    }
+
+    /* Page header - make more compact */
+    #profile-view .page-header {
+        padding: var(--spacing-2) 0;
+    }
+
+    #profile-view .page-title {
+        font-size: var(--text-lg);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-2);
+    }
+
+    #profile-view .page-title i {
+        font-size: var(--text-base);
+    }
+
+    #profile-view .page-subtitle {
+        font-size: 0.7rem;
+        margin-top: var(--spacing-1);
+    }
+
+    /* Profile avatar - smaller */
+    .profile-avatar-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-avatar-edit {
+        width: 28px;
+        height: 28px;
+        font-size: 0.65rem;
+        border: 2px solid var(--white);
+    }
+
+    /* Profile card text */
+    #profile-view .card-body h2 {
+        font-size: var(--text-base);
+        margin-top: var(--spacing-2);
+    }
+
+    #profile-view .card-body p {
+        font-size: var(--text-xs);
+    }
+
+    /* Stats - more compact */
+    .profile-stat {
+        gap: var(--spacing-2);
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    .profile-stat-icon {
+        width: 36px;
+        height: 36px;
+        font-size: var(--text-base);
+    }
+
+    .profile-stat-value {
+        font-size: var(--text-base);
+    }
+
+    .profile-stat-label {
+        font-size: 0.7rem;
+    }
+
+    /* Tabs - smaller and more compact */
+    .tabs {
+        margin-bottom: var(--spacing-3);
+    }
+
+    .tab {
+        padding: var(--spacing-2);
+        font-size: 0.7rem;
+        gap: var(--spacing-1);
+        min-width: fit-content;
+    }
+
+    .tab i {
+        font-size: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    /* Shorten tab text on very small screens */
+    .tab[data-tab="personal"]::after {
+        content: " Dane";
+    }
+
+    .tab[data-tab="security"]::after {
+        content: " Bezp.";
+    }
+
+    .tab[data-tab="settings"]::after {
+        content: " Ustaw.";
+    }
+
+    .tab[data-tab="logs"]::after {
+        content: " Logi";
+    }
+
+    /* Hide original long text */
+    .tab {
+        font-size: 0;
+    }
+
+    .tab::after {
+        font-size: 0.7rem;
+    }
+
+    /* Card adjustments */
+    #profile-view .card {
+        border-radius: var(--radius-md);
+    }
+
+    #profile-view .card-header {
+        padding: var(--spacing-3);
+    }
+
+    #profile-view .card-header h3 {
+        font-size: var(--text-sm);
+    }
+
+    #profile-view .card-body {
+        padding: var(--spacing-3);
+    }
+
+    #profile-view .card-footer {
+        padding: var(--spacing-2);
+    }
+
+    /* Grid spacing */
+    #profile-view .grid {
+        gap: var(--spacing-3);
+    }
+
+    #profile-view .col-span-1,
+    #profile-view .col-span-2 {
+        gap: var(--spacing-3);
+    }
+
+    #profile-view .card + .card {
+        margin-top: var(--spacing-3);
+    }
+
+    /* Forms - more compact */
+    #profile-view .form-group {
+        margin-bottom: var(--spacing-3);
+    }
+
+    #profile-view .form-label {
+        font-size: 0.75rem;
+        margin-bottom: var(--spacing-1);
+    }
+
+    #profile-view .form-input,
+    #profile-view .form-select {
+        font-size: var(--text-sm);
+        padding: var(--spacing-2);
+    }
+
+    #profile-view .form-hint {
+        font-size: 0.7rem;
+        margin-top: var(--spacing-1);
+    }
+
+    #profile-view .form-hint i {
+        font-size: 0.7rem;
+    }
+
+    /* Buttons - more compact */
+    #profile-view .btn {
+        font-size: 0.75rem;
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    #profile-view .btn i {
+        font-size: 0.75rem;
+    }
+
+    #profile-view .card .btn {
+        padding: var(--spacing-2) var(--spacing-3);
+    }
+
+    #profile-view .card-footer .btn {
+        padding: var(--spacing-2);
+        font-size: 0.75rem;
+    }
+
+    .form-actions {
+        gap: var(--spacing-2);
+        margin-top: var(--spacing-3);
+    }
+
+    /* Badges - smaller */
+    #profile-view .badge {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    /* Form switches - smaller */
+    .form-switch {
+        padding: var(--spacing-2);
+        margin-bottom: var(--spacing-2) !important;
+    }
+
+    .form-switch-input {
+        width: 40px;
+        height: 22px;
+    }
+
+    .form-switch-input::after {
+        width: 18px;
+        height: 18px;
+    }
+
+    .form-switch label {
+        font-size: var(--text-sm);
+    }
+
+    /* Logs filters - very compact */
+    .logs-filters {
+        padding: var(--spacing-2);
+    }
+
+    .logs-filters .form-group {
+        margin-bottom: 0;
+    }
+
+    .logs-filters .form-label {
+        font-size: 0.7rem;
+        margin-bottom: var(--spacing-1);
+    }
+
+    .logs-filters .form-label i {
+        font-size: 0.65rem;
+    }
+
+    .logs-filters .form-input,
+    .logs-filters .form-select {
+        font-size: 0.75rem;
+        padding: var(--spacing-2);
+    }
+
+    .logs-filters .grid {
+        gap: var(--spacing-2);
+    }
+
+    .logs-filters .form-actions {
+        margin-top: var(--spacing-2);
+        gap: var(--spacing-2);
+    }
+
+    .logs-filters .btn {
+        font-size: 0.75rem;
+        padding: var(--spacing-2);
+    }
+
+    .logs-filters .btn i {
+        font-size: 0.7rem;
+    }
+
+    .logs-filter-info {
+        font-size: 0.65rem;
+        margin-top: var(--spacing-1);
+    }
+
+    /* Mobile log cards - compact */
+    .log-mobile-card {
+        padding: var(--spacing-2);
+        border-radius: var(--radius-md);
+    }
+
+    .log-mobile-header {
+        margin-bottom: var(--spacing-2);
+        padding-bottom: var(--spacing-2);
+    }
+
+    .log-mobile-date {
+        font-size: 0.65rem;
+    }
+
+    .log-mobile-body {
+        gap: var(--spacing-1);
+    }
+
+    .log-mobile-row {
+        gap: var(--spacing-1);
+    }
+
+    .log-mobile-label {
+        font-size: 0.65rem;
+    }
+
+    .log-mobile-value {
+        font-size: 0.75rem;
+    }
+
+    .logs-mobile-container {
+        gap: var(--spacing-2);
+    }
+
+    .log-action-badge,
+    .log-status-badge {
+        font-size: 0.65rem;
+        padding: 2px 8px;
+    }
+
+    /* Logs pagination - compact */
+    .logs-pagination {
+        padding: var(--spacing-2);
+        gap: var(--spacing-2);
+    }
+
+    .logs-pagination .btn {
+        font-size: 0.75rem;
+        padding: var(--spacing-2);
+    }
+
+    .logs-pagination .btn i {
+        font-size: 0.7rem;
+    }
+
+    .logs-page-info {
+        font-size: 0.65rem;
+    }
+
+    .logs-page-size-selector {
+        font-size: 0.65rem;
+        gap: var(--spacing-1);
+    }
+
+    .logs-page-size-selector select {
+        padding: 3px 18px 3px 5px;
+        font-size: 0.65rem;
+    }
+
+    /* Empty state - compact */
+    .logs-empty-state {
+        padding: var(--spacing-4);
+    }
+
+    .logs-empty-state i {
+        font-size: 28px;
+        margin-bottom: var(--spacing-2);
+    }
+
+    .logs-empty-state p {
+        font-size: var(--text-xs);
+    }
+
+    /* Tab content spacing */
+    #profile-view .tab-content {
+        min-height: 150px;
+    }
+
+    .tab-content .card + .card {
+        margin-top: var(--spacing-3);
+    }
+
+    #settings-tab .card {
+        margin-bottom: var(--spacing-3);
+    }
+
+    /* Form button group - even more compact */
+    #profile-view .form-button-group {
+        gap: var(--spacing-2);
+    }
+
+    /* Personal data forms */
+    #personal-data-form .form-group,
+    #change-password-form .form-group,
+    #api-key-form .form-group {
+        margin-bottom: var(--spacing-3);
+    }
+
+    #logs-tab .card-body {
+        padding: var(--spacing-2);
+    }
+}
+
+/* ===== VERY SMALL MOBILE DEVICES (iPhone SE, small Androids) ===== */
+@media (max-width: 360px) {
+    /* Even more compact view */
+    #profile-view {
+        padding: 0 var(--spacing-1);
+    }
+
+    /* Page header */
+    #profile-view .page-header {
+        padding: var(--spacing-2) 0;
+    }
+
+    #profile-view .page-title {
+        font-size: var(--text-base);
+    }
+
+    #profile-view .page-title i {
+        font-size: var(--text-sm);
+    }
+
+    #profile-view .page-subtitle {
+        font-size: 0.65rem;
+    }
+
+    /* Profile avatar - even smaller */
+    .profile-avatar-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .profile-avatar-edit {
+        width: 24px;
+        height: 24px;
+        font-size: 0.6rem;
+    }
+
+    /* Profile card */
+    #profile-view .card-body h2 {
+        font-size: var(--text-sm);
+    }
+
+    #profile-view .card-body p {
+        font-size: 0.7rem;
+    }
+
+    /* Stats - ultra compact */
+    .profile-stat {
+        padding: var(--spacing-2);
+        gap: var(--spacing-2);
+    }
+
+    .profile-stat-icon {
+        width: 32px;
+        height: 32px;
+        font-size: var(--text-sm);
+    }
+
+    .profile-stat-value {
+        font-size: var(--text-sm);
+    }
+
+    .profile-stat-label {
+        font-size: 0.65rem;
+    }
+
+    /* Tabs - icon only mode */
+    .tab {
+        padding: var(--spacing-2);
+    }
+
+    .tab::after {
+        font-size: 0;
+    }
+
+    /* Show only icons on very small screens */
+    .tab i {
+        font-size: 0.85rem;
+        margin: 0;
+    }
+
+    /* Cards */
+    #profile-view .card {
+        border-radius: var(--radius-md);
+    }
+
+    #profile-view .card-header {
+        padding: var(--spacing-2);
+    }
+
+    #profile-view .card-header h3 {
+        font-size: 0.75rem;
+    }
+
+    #profile-view .card-body {
+        padding: var(--spacing-2);
+    }
+
+    #profile-view .card-footer {
+        padding: var(--spacing-2);
+    }
+
+    /* Grid */
+    #profile-view .grid {
+        gap: var(--spacing-2);
+    }
+
+    #profile-view .col-span-1,
+    #profile-view .col-span-2 {
+        gap: var(--spacing-2);
+    }
+
+    /* Forms */
+    #profile-view .form-group {
+        margin-bottom: var(--spacing-2);
+    }
+
+    #profile-view .form-label {
+        font-size: 0.7rem;
+    }
+
+    #profile-view .form-input,
+    #profile-view .form-select {
+        font-size: 0.75rem;
+        padding: var(--spacing-2);
+    }
+
+    #profile-view .form-hint {
+        font-size: 0.65rem;
+    }
+
+    /* Buttons */
+    #profile-view .btn {
+        font-size: 0.7rem;
+        padding: var(--spacing-2);
+    }
+
+    #profile-view .btn i {
+        font-size: 0.7rem;
+    }
+
+    .form-actions {
+        gap: var(--spacing-1);
+        margin-top: var(--spacing-2);
+    }
+
+    /* Badges */
+    #profile-view .badge {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+
+    /* Logs filters */
+    .logs-filters {
+        padding: var(--spacing-2);
+    }
+
+    .logs-filters .form-label {
+        font-size: 0.65rem;
+    }
+
+    .logs-filters .form-input,
+    .logs-filters .form-select {
+        font-size: 0.7rem;
+        padding: var(--spacing-1) var(--spacing-2);
+    }
+
+    .logs-filters .btn {
+        font-size: 0.7rem;
+        padding: var(--spacing-1) var(--spacing-2);
+    }
+
+    /* Mobile log cards */
+    .log-mobile-card {
+        padding: var(--spacing-2);
+    }
+
+    .log-action-badge,
+    .log-status-badge {
+        font-size: 0.6rem;
+        padding: 2px 6px;
+    }
+
+    /* Pagination */
+    .logs-pagination {
+        padding: var(--spacing-2);
+    }
+
+    .logs-pagination .btn {
+        font-size: 0.7rem;
+        padding: var(--spacing-1) var(--spacing-2);
+    }
+
+    .logs-page-info,
+    .logs-page-size-selector {
+        font-size: 0.6rem;
+    }
+}

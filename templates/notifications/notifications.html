@@ -1,0 +1,47 @@
+<div id="notifications-view" class="content-view">
+                <div class="page-header">
+                    <div>
+                        <h1 class="page-title">
+                            <i class="fas fa-bell"></i> Powiadomienia
+                        </h1>
+                        <p class="page-subtitle">Wszystkie powiadomienia i alerty w jednym miejscu</p>
+                    </div>
+                    <div class="page-actions">
+                        <button id="mark-all-read-btn" class="btn btn-secondary">
+                            <i class="fas fa-check-double"></i> Oznacz wszystkie jako przeczytane
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="tabs-pills mb-6">
+                    <button class="tab filter-btn active" data-filter="all">
+                        <i class="fas fa-list"></i> Wszystkie (<span id="all-count">0</span>)
+                    </button>
+                    <button class="tab filter-btn" data-filter="unread">
+                        <i class="fas fa-envelope"></i> Nieprzeczytane (<span id="unread-count">0</span>)
+                    </button>
+                    <button class="tab filter-btn" data-filter="read">
+                        <i class="fas fa-envelope-open"></i> Przeczytane (<span id="read-count">0</span>)
+                    </button>
+                    <button class="tab filter-btn" data-filter="important">
+                        <i class="fas fa-star"></i> Ważne (<span id="important-count">0</span>)
+                    </button>
+                </div>
+
+                <!-- Notifications List -->
+                <div class="content-section">
+                    <div class="notifications-list" id="all-notifications-list">
+                        <!-- Notifications will be inserted here by JavaScript -->
+                    </div>
+
+                    <!-- Empty State (will be shown by JS when no notifications) -->
+                    <div id="notifications-empty" class="notifications-empty hidden">
+                        <div class="notifications-empty-icon">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <p class="notifications-empty-text">Brak powiadomień</p>
+                        <p class="notifications-empty-subtext">Nie masz żadnych powiadomień do wyświetlenia</p>
+                    </div>
+                </div>
+            </div>

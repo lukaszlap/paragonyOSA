@@ -1,0 +1,70 @@
+<!-- Login Form -->
+                    <div id="login-form" class="auth-form active">
+                        <div class="card-body">
+                            <h2 class="text-2xl font-bold mb-6 text-center">Zaloguj się</h2>
+                            
+                            <!-- Message Container -->
+                            <div id="login-message" class="auth-message hidden"></div>
+                            
+                            <form id="loginForm">
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="login-email" class="form-label">
+                                        <i class="fas fa-envelope"></i> Email
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-envelope"></i>
+                                        <input type="email" id="login-email" class="form-input" 
+                                               placeholder="twoj@email.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <label for="login-password" class="form-label">
+                                        <i class="fas fa-lock"></i> Hasło
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-lock"></i>
+                                        <input type="password" id="login-password" class="form-input" 
+                                               placeholder="••••••••" required>
+                                    </div>
+                                </div>
+
+                                <!-- Remember & Forgot -->
+                                <div class="flex items-center justify-between mb-6">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="remember-me" class="form-check-input">
+                                        <label for="remember-me" class="form-check-label">Zapamiętaj mnie</label>
+                                    </div>
+                                    <a href="#" class="text-sm text-primary-color">Zapomniałeś hasła?</a>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="fas fa-sign-in-alt"></i> Zaloguj się
+                                </button>
+
+                                <!-- Divider -->
+                                <div class="auth-divider">
+                                    <span>lub</span>
+                                </div>
+
+                                <!-- Social Login -->
+                                <div class="flex gap-3">
+                                    <button type="button" class="btn-social-google flex-1">
+                                        <i class="fab fa-google"></i> Google
+                                    </button>
+                                    <button type="button" class="btn-social-facebook flex-1">
+                                        <i class="fab fa-facebook"></i> Facebook
+                                    </button>
+                                </div>
+
+                                <!-- Register Link -->
+                                <p class="text-center mt-6 text-sm">
+                                    Nie masz konta? 
+                                    <a href="#" id="show-register" class="text-primary-color font-medium">Zarejestruj się</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>

@@ -1,0 +1,49 @@
+# Environment variables - NEVER commit this file
+.env
+.env.local
+.env.production
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# ChromaDB (vector store - large binary files)
+assistant_ai/chroma_db/
+chroma_db/
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Certificates (if any)
+*.pem
+*.key
+*.crt
+
+# PDF documents (binary, usually large)
+*.pdf

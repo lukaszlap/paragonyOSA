@@ -1,0 +1,151 @@
+<div id="reports-view" class="content-view">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-chart-line"></i> Raporty i Analizy</h1>
+                </div>
+
+                <div class="filters-section">
+                    <h3>Filtry</h3>
+                    <div class="filters-grid">
+                        <div class="form-group">
+                            <label for="report-start-date">Data początkowa</label>
+                            <input type="date" id="report-start-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="report-end-date">Data końcowa</label>
+                            <input type="date" id="report-end-date">
+                        </div>
+                        <div class="form-group">
+                            <label for="report-categories">Kategorie</label>
+                            <select id="report-categories" multiple></select>
+                        </div>
+                        <button id="generate-report-btn" class="btn btn-primary">
+                            <i class="fas fa-chart-bar"></i> Generuj raport
+                        </button>
+                    </div>
+                </div>
+
+                <div class="report-summary-section">
+                    <h3>Podsumowanie okresu</h3>
+                    <div class="stats-grid report-summary-grid">
+                        <div class="stats-card stats-card-primary">
+                            <div class="stats-card-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                            <div class="stats-card-content">
+                                <div class="stats-card-value" id="report-total-amount">--</div>
+                                <div class="stats-card-label">Łączne wydatki</div>
+                                <div class="stats-card-change" id="report-total-change">Brak danych</div>
+                            </div>
+                            <div class="stats-card-circle"></div>
+                        </div>
+                        <div class="stats-card stats-card-success">
+                            <div class="stats-card-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="stats-card-content">
+                                <div class="stats-card-value" id="report-average-amount">--</div>
+                                <div class="stats-card-label">Średni wydatek dzienny</div>
+                                <div class="stats-card-change" id="report-average-change">Brak danych</div>
+                            </div>
+                            <div class="stats-card-circle"></div>
+                        </div>
+                        <div class="stats-card stats-card-warning">
+                            <div class="stats-card-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="stats-card-content">
+                                <div class="stats-card-value" id="report-top-category">--</div>
+                                <div class="stats-card-label">Największa kategoria</div>
+                                <div class="stats-card-change" id="report-top-category-share">Brak danych</div>
+                            </div>
+                            <div class="stats-card-circle"></div>
+                        </div>
+                        <div class="stats-card stats-card-secondary">
+                            <div class="stats-card-icon">
+                                <i class="fas fa-chart-area"></i>
+                            </div>
+                            <div class="stats-card-content">
+                                <div class="stats-card-value" id="report-peak-day">--</div>
+                                <div class="stats-card-label">Najdroższy dzień</div>
+                                <div class="stats-card-change" id="report-peak-day-amount">Brak danych</div>
+                            </div>
+                            <div class="stats-card-circle"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reports-container">
+                    <div class="chart-container">
+                        <h3>Wydatki według kategorii</h3>
+                        <div id="category-chart" class="chart-placeholder"></div>
+                    </div>
+                    <div class="chart-container">
+                        <h3>Wydatki w czasie</h3>
+                        <div id="timeline-chart" class="chart-placeholder"></div>
+                    </div>
+                </div>
+
+                <div class="reports-extra-grid">
+                    <div class="card report-details-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-list"></i> Szczegółowy podział kategorii</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="report-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Kategoria</th>
+                                            <th>Kwota</th>
+                                            <th>Udział</th>
+                                            <th>Zmiana vs poprzedni okres</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="report-category-table"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card report-insights-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-lightbulb"></i> Kluczowe obserwacje</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="report-insights" class="report-insights-list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="report-trend-section">
+                    <div class="card">
+                        <div class="card-header trend-header">
+                            <h3><i class="fas fa-wave-square"></i> Trend wydatków w kategorii</h3>
+                            <div class="trend-selectors">
+                                <select id="report-trend-category"></select>
+                                <select id="report-trend-months">
+                                    <option value="3">3 miesiące</option>
+                                    <option value="6" selected>6 miesięcy</option>
+                                    <option value="12">12 miesięcy</option>
+                                    <option value="24">24 miesiące</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div id="report-trend-chart" class="chart-placeholder"></div>
+                            <div id="report-trend-meta" class="trend-meta"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-history-section">
+                    <h3>Historia cen produktu</h3>
+                    <div class="form-group">
+                        <input type="text" id="product-search" placeholder="Nazwa produktu">
+                        <button id="search-price-history-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Szukaj
+                        </button>
+                    </div>
+                    <div id="price-history-result"></div>
+                </div>
+            </div>

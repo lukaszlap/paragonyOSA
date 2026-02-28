@@ -1,0 +1,198 @@
+<div id="scan-view" class="content-view">
+                <div class="page-header">
+                    <h1 class="page-title"><i class="fas fa-camera"></i> Skanuj Paragon</h1>
+                </div>
+
+                <div class="scan-container">
+                    <div class="api-key-check" id="api-key-section">
+                        <div class="api-key-card">
+                            <div class="api-key-header">
+                                <div class="api-key-icon">
+                                    <i class="fas fa-key"></i>
+                                </div>
+                                <div class="api-key-header-content">
+                                    <h3 class="api-key-title">Klucz API Gemini</h3>
+                                    <p class="api-key-subtitle">Potrzebujesz klucza API, aby korzystać z funkcji skanowania paragonów</p>
+                                </div>
+                            </div>
+
+                            <div class="api-key-instructions">
+                                <h4 class="api-instructions-title">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Jak uzyskać klucz API?
+                                </h4>
+                                <div class="api-instructions-steps">
+                                    <div class="api-instruction-step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <div class="step-title">Przejdź do Google AI Studio</div>
+                                            <div class="step-description">
+                                                Otwórz stronę 
+                                                <a href="https://aistudio.google.com/" target="_blank" rel="noopener noreferrer" class="api-link">
+                                                    aistudio.google.com
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="api-instruction-step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <div class="step-title">Uzyskaj klucz API</div>
+                                            <div class="step-description">
+                                                Po lewej stronie na dole kliknij <strong>"Get API key"</strong> lub przejdź bezpośrednio do
+                                                <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" class="api-link">
+                                                    aistudio.google.com/apikey
+                                                    <i class="fas fa-external-link-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="api-instruction-step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <div class="step-title">Utwórz nowy klucz</div>
+                                            <div class="step-description">
+                                                Kliknij <strong>"Create API key"</strong> na górze strony, wybierz projekt (jeśli nie masz projektu, najpierw go utwórz)
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="api-instruction-step">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <div class="step-title">Skopiuj klucz</div>
+                                            <div class="step-description">
+                                                Skopiuj wygenerowany klucz API i wklej go w polu poniżej
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="api-key-form">
+                                <div class="api-key-input-wrapper">
+                                    <label for="gemini-key-input" class="api-key-label">
+                                        <i class="fas fa-key"></i>
+                                        Twój klucz API Gemini
+                                    </label>
+                                    <div class="api-key-input-group">
+                                        <i class="fas fa-lock api-key-input-icon"></i>
+                                        <input 
+                                            type="text" 
+                                            id="gemini-key-input" 
+                                            class="api-key-input" 
+                                            placeholder="Wklej klucz API tutaj (np. AIzaSy...)" 
+                                            autocomplete="off"
+                                            spellcheck="false"
+                                        >
+                                    </div>
+                                </div>
+                                
+                                <button id="save-api-key-btn" class="api-key-save-btn">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Zapisz klucz API</span>
+                                </button>
+                            </div>
+
+                            <div class="api-key-security-note">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Twój klucz API jest przechowywany bezpiecznie i używany wyłącznie do analizy paragonów</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="scan-area" class="scan-area hidden">
+                        <!-- Upload File Section -->
+                        <div class="scan-method-card" id="upload-card">
+                            <div class="scan-method-content">
+                                <div class="scan-method-icon upload-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <h3 class="scan-method-title">Prześlij plik z dysku</h3>
+                                <p class="scan-method-description">Przeciągnij i upuść paragon lub wybierz plik z urządzenia</p>
+                                
+                                <div class="upload-zone" id="upload-zone">
+                                    <input type="file" id="receipt-file" accept="image/*" hidden>
+                                    <button class="btn btn-primary btn-lg" id="select-file-btn">
+                                        <i class="fas fa-file-image"></i> Wybierz plik
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Camera Section -->
+                        <div class="scan-method-card" id="camera-card">
+                            <div class="scan-method-content">
+                                <div class="scan-method-icon camera-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h3 class="scan-method-title">Zrób zdjęcie kamerą</h3>
+                                <p class="scan-method-description">Użyj kamery urządzenia aby zrobić zdjęcie paragonu</p>
+                                
+                                <!-- Camera Trigger -->
+                                <div class="camera-trigger" id="camera-trigger">
+                                    <button class="btn btn-success btn-lg" id="take-photo-btn">
+                                        <i class="fas fa-camera"></i> Uruchom kamerę
+                                    </button>
+                                </div>
+                                
+                                <!-- Camera Area (shown after clicking button) -->
+                                <div id="camera-area" class="camera-active-area hidden">
+                                    <div class="camera-video-container">
+                                        <video id="camera-preview" autoplay playsinline></video>
+                                        <canvas id="camera-canvas" hidden></canvas>
+                                    </div>
+                                    <div class="camera-controls">
+                                        <button id="capture-photo-btn" class="btn btn-success btn-lg">
+                                            <i class="fas fa-camera"></i> Zrób zdjęcie
+                                        </button>
+                                        <button id="cancel-camera-btn" class="btn btn-secondary btn-lg">
+                                            <i class="fas fa-times"></i> Anuluj
+                                        </button>
+                                    </div>
+                                    <div class="camera-hint">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <span>Upewnij się, że paragon jest dobrze oświetlony i wyraźny</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="preview-area" class="preview-area hidden">
+                            <h3>Podgląd:</h3>
+                            <img id="preview-image" alt="Podgląd paragonu">
+                            <div class="preview-actions">
+                                <button id="analyze-btn" class="btn btn-success">
+                                    <i class="fas fa-search"></i> Analizuj paragon
+                                </button>
+                                <button id="cancel-preview-btn" class="btn btn-secondary">
+                                    <i class="fas fa-times"></i> Anuluj
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="scan-result" class="scan-result hidden">
+                            <div class="success-message">
+                                <div class="success-icon-container">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Paragon został przeanalizowany!</h3>
+                                <p class="redirect-text">Przekierowanie do szczegółów za <span id="redirect-countdown">3</span>s...</p>
+                                <span id="new-receipt-id" hidden></span>
+                            </div>
+                        </div>
+                        <!-- Tips Section -->
+                        <section class="scan-tips" id="scan-tips">
+                            <h3><i class="fas fa-lightbulb"></i> Wskazówki skanowania</h3>
+                            <ul>
+                                <li>Rozłóż paragon na płaskiej powierzchni i zadbaj o równomierne oświetlenie bez cieni.</li>
+                                <li>Ustaw aparat prostopadle do paragonu, aby uniknąć zniekształceń i rozmycia.</li>
+                                <li>Przytnij kadr tak, by wypełniał go sam paragon – przyspiesza to analizę obrazu.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>

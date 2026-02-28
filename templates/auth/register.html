@@ -1,0 +1,100 @@
+<!-- Register Form -->
+                    <div id="register-form" class="auth-form hidden">
+                        <div class="card-body">
+                            <h2 class="text-2xl font-bold mb-6 text-center">Zarejestruj się</h2>
+                            
+                            <!-- Message Container -->
+                            <div id="register-message" class="auth-message hidden"></div>
+                            
+                            <form id="registerForm">
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label for="register-name" class="form-label">
+                                        <i class="fas fa-user"></i> Imię
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-user"></i>
+                                        <input type="text" id="register-name" class="form-input" 
+                                               placeholder="Twoje imię" required minlength="2">
+                                    </div>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group">
+                                    <label for="register-email" class="form-label">
+                                        <i class="fas fa-envelope"></i> Email
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-envelope"></i>
+                                        <input type="email" id="register-email" class="form-input" 
+                                               placeholder="twoj@email.com" required>
+                                    </div>
+                                </div>
+
+                                <!-- Password -->
+                                <div class="form-group">
+                                    <label for="register-password" class="form-label">
+                                        <i class="fas fa-lock"></i> Hasło
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-lock"></i>
+                                        <input type="password" id="register-password" class="form-input" 
+                                               placeholder="••••••••" required minlength="8">
+                                    </div>
+                                    <p class="form-hint">
+                                        <i class="fas fa-info-circle"></i>
+                                        Min. 8 znaków, wielka litera, cyfra, znak specjalny
+                                    </p>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div class="form-group">
+                                    <label for="register-password-confirm" class="form-label">
+                                        <i class="fas fa-lock"></i> Powtórz hasło
+                                    </label>
+                                    <div class="form-input-group">
+                                        <i class="form-input-icon fas fa-lock"></i>
+                                        <input type="password" id="register-password-confirm" class="form-input" 
+                                               placeholder="••••••••" required minlength="8">
+                                    </div>
+                                </div>
+
+                                <!-- Terms -->
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="terms" class="form-check-input" required>
+                                        <label for="terms" class="form-check-label">
+                                            Akceptuję <a href="#" class="text-primary-color">regulamin</a> i 
+                                            <a href="#" class="text-primary-color">politykę prywatności</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-primary w-full">
+                                    <i class="fas fa-user-plus"></i> Zarejestruj się
+                                </button>
+
+                                <!-- Divider -->
+                                <div class="auth-divider">
+                                    <span>lub</span>
+                                </div>
+
+                                <!-- Social Login -->
+                                <div class="flex gap-3">
+                                    <button type="button" class="btn-social-google flex-1">
+                                        <i class="fab fa-google"></i> Google
+                                    </button>
+                                    <button type="button" class="btn-social-facebook flex-1">
+                                        <i class="fab fa-facebook"></i> Facebook
+                                    </button>
+                                </div>
+
+                                <!-- Login Link -->
+                                <p class="text-center mt-6 text-sm">
+                                    Masz już konto? 
+                                    <a href="#" id="show-login" class="text-primary-color font-medium">Zaloguj się</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>

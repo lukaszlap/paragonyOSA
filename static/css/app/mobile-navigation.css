@@ -1,0 +1,149 @@
+/* Mobile Bottom Navigation */
+
+/* ===== MOBILE NAV BOTTOM ===== */
+.mobile-nav-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    z-index: var(--z-navbar);
+    display: none;
+    padding: var(--spacing-2) 0;
+}
+
+.mobile-nav-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-1);
+    padding: var(--spacing-2) var(--spacing-3);
+    color: var(--gray-600);
+    text-decoration: none;
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    transition: var(--transition-fast);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    min-width: 60px;
+    position: relative;
+}
+
+.mobile-nav-item:active {
+    background: var(--gray-100);
+    transform: scale(0.95);
+}
+
+.mobile-nav-item.active {
+    color: var(--primary-color);
+}
+
+.mobile-nav-icon {
+    font-size: var(--text-2xl);
+    transition: var(--transition-fast);
+}
+
+.mobile-nav-item.active .mobile-nav-icon {
+    transform: scale(1.15);
+}
+
+.mobile-nav-text {
+    margin: 0;
+}
+
+/* Badge for mobile nav */
+.mobile-nav-item .badge {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+/* ===== SHOW ON MOBILE ONLY ===== */
+@media (max-width: 768px) {
+    .mobile-nav-bottom {
+        display: block;
+    }
+    
+    /* Add padding to main content to account for bottom nav */
+    .app-content {
+        padding-bottom: calc(var(--spacing-6) + 70px) !important;
+    }
+    
+    /* Hide desktop navbar on mobile when bottom nav is shown */
+    .navbar {
+        position: relative;
+    }
+
+    body.sidebar-open .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: var(--z-navbar);
+    }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mobile-nav-bottom {
+    animation: slideUp 0.3s ease-out;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.mobile-nav-item:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ===== RIPPLE EFFECT ===== */
+.mobile-nav-item {
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--primary-light);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.mobile-nav-item:active::before {
+    width: 100px;
+    height: 100px;
+}

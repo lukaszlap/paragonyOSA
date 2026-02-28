@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragony - Zarządzaj swoimi paragonami</title>
+    <link rel="stylesheet" href="/static/css/app/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    {% include "components/loaders.html" %}
+
+    <!-- Login/Register View -->
+    <div id="auth-view" class="view active">
+        {% include "auth/auth_nav.html" %}
+        
+        <div class="auth-page">
+            <div class="auth-layout">
+                <div class="auth-card">
+                    <div class="auth-header">
+                        <div class="auth-logo">
+                            <i class="fas fa-receipt"></i>
+                        </div>
+                        <h1 class="auth-title">Paragony</h1>
+                        <p class="auth-subtitle">Zarządzaj swoimi paragonami inteligentnie</p>
+                    </div>
+
+                    {% include "auth/login.html" %}
+
+                    {% include "auth/register.html" %}
+
+                    <!-- Kept for backward compatibility, but now using form-specific messages -->
+                    <div id="auth-message" class="auth-message hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Application View -->
+    <div id="app-view" class="view">
+        {% include "layout/navbar.html" %}
+
+        {% include "layout/sidebar.html" %}
+
+        <!-- Sidebar Backdrop (for mobile) -->
+        <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+        <!-- Main Content Container -->
+        <div class="main-wrapper">
+            <div class="app-content">
+                {% include "dashboard/dashboard.html" %}
+                {% include "scan/scan.html" %}
+                {% include "receipts/receipts_list.html" %}
+                {% include "receipts/receipt_detail.html" %}
+                {% include "limits/limits.html" %}
+                {% include "reports/reports.html" %}
+                {% include "shopping_lists/shopping_lists.html" %}
+                {% include "search/search.html" %}
+                {% include "notifications/notifications.html" %}
+                {% include "profile/profile.html" %}
+                {% include "guide/guide.html" %}
+                {% include "assistant/assistant.html" %}
+
+                {% include "layout/mobile_nav.html" %}
+            </div>
+        </div>
+    </div>
+
+    {% include "components/modals.html" %}
+    {% include "components/toast.html" %}
+    {% include "components/floating_assistant.html" %}
+    
+    {% include "receipts/receipts_modals.html" %}
+    {% include "limits/limits_modal.html" %}
+    {% include "shopping_lists/shopping_lists_modals.html" %}
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/api.js"></script>
+    <script src="/static/js/auth.js"></script>
+    <script src="/static/js/ui.js"></script>
+    <script src="/static/js/dashboard.js"></script>
+    <script src="/static/js/scan.js"></script>
+    <script src="/static/js/receipts.js"></script>
+    <script src="/static/js/limits.js"></script>
+    <script src="/static/js/reports.js"></script>
+    <script src="/static/js/shopping-lists.js"></script>
+    <script src="/static/js/search.js"></script>
+    <script src="/static/js/notifications.js"></script>
+    <script src="/static/js/profile.js"></script>
+    <script src="/static/js/guides/guideDatabase.js"></script>
+    <script src="/static/js/guide.js"></script>
+    <script src="/static/js/assistant.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

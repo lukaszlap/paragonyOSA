@@ -1,0 +1,362 @@
+/* Typography System */
+/* Font definitions, headings, text utilities */
+
+/* ===== Google Fonts Import ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===== Base Typography ===== */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
+    color: var(--gray-800);
+}
+
+/* ===== Headings ===== */
+h1, .h1 {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-6);
+}
+
+h2, .h2 {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-5);
+}
+
+h3, .h3 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-4);
+}
+
+h4, .h4 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-snug);
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-3);
+}
+
+h5, .h5 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-snug);
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-3);
+}
+
+h6, .h6 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-normal);
+    color: var(--gray-700);
+    margin-bottom: var(--spacing-2);
+}
+
+/* ===== Paragraphs ===== */
+p {
+    margin-bottom: var(--spacing-4);
+    line-height: var(--leading-relaxed);
+    color: var(--gray-700);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Text Size Utilities ===== */
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+.text-4xl { font-size: var(--text-4xl); }
+.text-5xl { font-size: var(--text-5xl); }
+.text-6xl { font-size: var(--text-6xl); }
+
+/* ===== Font Weight Utilities ===== */
+.font-light { font-weight: var(--font-light); }
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+.font-extrabold { font-weight: var(--font-extrabold); }
+
+/* ===== Line Height Utilities ===== */
+.leading-none { line-height: var(--leading-none); }
+.leading-tight { line-height: var(--leading-tight); }
+.leading-snug { line-height: var(--leading-snug); }
+.leading-normal { line-height: var(--leading-normal); }
+.leading-relaxed { line-height: var(--leading-relaxed); }
+.leading-loose { line-height: var(--leading-loose); }
+
+/* ===== Text Color Utilities ===== */
+.text-white { color: var(--white); }
+.text-black { color: var(--black); }
+.text-gray-50 { color: var(--gray-50); }
+.text-gray-100 { color: var(--gray-100); }
+.text-gray-200 { color: var(--gray-200); }
+.text-gray-300 { color: var(--gray-300); }
+.text-gray-400 { color: var(--gray-400); }
+.text-gray-500 { color: var(--gray-500); }
+.text-gray-600 { color: var(--gray-600); }
+.text-gray-700 { color: var(--gray-700); }
+.text-gray-800 { color: var(--gray-800); }
+.text-gray-900 { color: var(--gray-900); }
+
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-accent { color: var(--accent-color); }
+.text-success { color: var(--success-color); }
+.text-danger { color: var(--danger-color); }
+.text-warning { color: var(--warning-color); }
+.text-info { color: var(--info-color); }
+
+/* ===== Text Alignment ===== */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ===== Text Transform ===== */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.normal-case { text-transform: none; }
+
+/* ===== Text Decoration ===== */
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+/* ===== Letter Spacing ===== */
+.tracking-tighter { letter-spacing: var(--tracking-tighter); }
+.tracking-tight { letter-spacing: var(--tracking-tight); }
+.tracking-normal { letter-spacing: var(--tracking-normal); }
+.tracking-wide { letter-spacing: var(--tracking-wide); }
+.tracking-wider { letter-spacing: var(--tracking-wider); }
+.tracking-widest { letter-spacing: var(--tracking-widest); }
+
+/* ===== Text Utilities ===== */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+}
+
+.text-clip {
+    text-overflow: clip;
+}
+
+.break-normal {
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.break-words {
+    overflow-wrap: break-word;
+}
+
+.break-all {
+    word-break: break-all;
+}
+
+/* ===== Monospace Text ===== */
+.font-mono {
+    font-family: var(--font-mono);
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+}
+
+/* ===== Links ===== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ===== Lists ===== */
+ul.list-disc {
+    list-style: disc;
+    padding-left: var(--spacing-6);
+}
+
+ol.list-decimal {
+    list-style: decimal;
+    padding-left: var(--spacing-6);
+}
+
+li {
+    margin-bottom: var(--spacing-2);
+}
+
+/* ===== Blockquote ===== */
+blockquote {
+    padding: var(--spacing-4) var(--spacing-6);
+    margin: var(--spacing-6) 0;
+    border-left: 4px solid var(--primary-color);
+    background: var(--gray-50);
+    border-radius: var(--radius-base);
+    font-style: italic;
+    color: var(--gray-700);
+}
+
+/* ===== Code Blocks ===== */
+pre {
+    background: var(--gray-900);
+    color: var(--gray-100);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    overflow-x: auto;
+    margin: var(--spacing-4) 0;
+}
+
+code {
+    background: var(--gray-100);
+    color: var(--danger-color);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-sm);
+    font-size: 0.875em;
+}
+
+pre code {
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* ===== Horizontal Rule ===== */
+hr {
+    border: none;
+    border-top: 1px solid var(--gray-200);
+    margin: var(--spacing-8) 0;
+}
+
+/* ===== Small & Strong ===== */
+small {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+strong, b {
+    font-weight: var(--font-bold);
+}
+
+em, i {
+    font-style: italic;
+}
+
+/* ===== Mark ===== */
+mark {
+    background: var(--warning-light);
+    color: var(--gray-900);
+    padding: var(--spacing-0-5) var(--spacing-1);
+    border-radius: var(--radius-sm);
+}
+
+/* ===== Responsive Typography ===== */
+
+/* Large tablets and small desktops (1300px and below) */
+@media (max-width: 1300px) {
+    body {
+        font-size: 15px; /* Slightly smaller base font */
+    }
+    
+    h1, .h1 { font-size: 2.5rem; /* 40px instead of 48px */ }
+    h2, .h2 { font-size: 2rem; /* 32px instead of 36px */ }
+    h3, .h3 { font-size: 1.625rem; /* 26px instead of 30px */ }
+    h4, .h4 { font-size: 1.375rem; /* 22px instead of 24px */ }
+    h5, .h5 { font-size: 1.125rem; /* 18px instead of 20px */ }
+    h6, .h6 { font-size: 1rem; /* 16px instead of 18px */ }
+}
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14.5px;
+    }
+    
+    h1, .h1 { font-size: 2.25rem; /* 36px */ }
+    h2, .h2 { font-size: 1.875rem; /* 30px */ }
+    h3, .h3 { font-size: 1.5rem; /* 24px */ }
+    h4, .h4 { font-size: 1.25rem; /* 20px */ }
+    h5, .h5 { font-size: 1.125rem; /* 18px */ }
+    h6, .h6 { font-size: 1rem; /* 16px */ }
+}
+
+/* Mobile landscape and small tablets (768px and below) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1, .h1 { font-size: 2rem; /* 32px */ }
+    h2, .h2 { font-size: 1.75rem; /* 28px */ }
+    h3, .h3 { font-size: 1.5rem; /* 24px */ }
+    h4, .h4 { font-size: 1.25rem; /* 20px */ }
+    h5, .h5 { font-size: 1.125rem; /* 18px */ }
+    h6, .h6 { font-size: 1rem; /* 16px */ }
+    
+    p {
+        line-height: 1.6; /* Slightly tighter for mobile */
+    }
+}
+
+/* Mobile portrait (480px and below) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1, .h1 { font-size: 1.75rem; /* 28px */ }
+    h2, .h2 { font-size: 1.5rem; /* 24px */ }
+    h3, .h3 { font-size: 1.25rem; /* 20px */ }
+    h4, .h4 { font-size: 1.125rem; /* 18px */ }
+    h5, .h5 { font-size: 1rem; /* 16px */ }
+    h6, .h6 { font-size: 0.875rem; /* 14px */ }
+}
+
+/* Very small mobile devices (360px and below) */
+@media (max-width: 360px) {
+    body {
+        font-size: 13px;
+    }
+    
+    h1, .h1 { font-size: 1.5rem; /* 24px */ }
+    h2, .h2 { font-size: 1.375rem; /* 22px */ }
+    h3, .h3 { font-size: 1.125rem; /* 18px */ }
+    h4, .h4 { font-size: 1rem; /* 16px */ }
+    h5, .h5 { font-size: 0.9375rem; /* 15px */ }
+    h6, .h6 { font-size: 0.875rem; /* 14px */ }
+}
